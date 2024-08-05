@@ -12,6 +12,8 @@
 .years-sec:hover .des{
     cursor: pointer;
     transition: 0.7s;
+
+    
     background: linear-gradient(200deg, #36E0FF, #8650F6);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
