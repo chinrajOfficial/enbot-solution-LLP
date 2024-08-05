@@ -1,0 +1,72 @@
+.home-container{
+    width: 90%;
+    height: 80vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.right-side-container{
+    width: 48%;
+    display: flex;
+    position: relative;
+}
+.AssetImg1{
+    height: 250px;
+}
+.AssetImg3{
+    position: absolute;
+    bottom: 0;
+    right: -2%;
+}
+.AssetImg2{
+    position: absolute;
+    bottom:0%;
+    right: -7%;
+}
+.intro-section{
+    width: 100%;
+    display: flex;
+    text-align: start;
+    justify-content: space-between;
+    align-items: center;
+}
+.intro-text{
+    width: 48%;
+}
+.intro-image{
+    width: 95%;
+    height: 100%;
+    border-radius: 10px 80px 10px 80px;
+}
+.intro-text h1{
+    font-size: 50px;
+    color: #c9c9d7f1;
+}
+.highlight{
+    font-size: 48px;
+    font-weight: bold;
+    background: linear-gradient(250deg, #36E0FF, #8650F6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.intro-text p{
+    color: var(--secondaryTextColor);
+    font-size: 18px;
+    margin-top: 16px;
+    line-height: 27px;
+}
+
+.growth-image{
+   width: 90%;
+   border-radius: 20px 40px 20px 40px;
+}
+.container-right{
+    width: 45%;
+}
+.WhoWeAreSec{
+    width: 85%;
+    margin: 0 auto;
+    height: 100vh;
+    
+}

@@ -1,0 +1,69 @@
+.NavCard{
+    width: 20%;
+    height: 100vh;
+    padding: 20px 30px 20px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 2px solid #8650F6;
+}
+.LogoImg{
+    width: 75%; 
+    padding-bottom: 10px;
+}
+.NavItem{
+    list-style: none;
+    padding: 10px 10px;
+    border-radius: 5px;
+}
+.NavMenuIcon{
+    color: #8650F6;
+    font-size: 16px;
+    font-weight: 600;
+}
+.NavItem:hover{
+    color: var(--logoTextColor);
+    background-color: var(--navItemBgColor);
+}
+.NavItem:hover .NavMenu{
+    color: var(--logoTextColor);
+    transition: 0.5s;
+    transform: translate3d(10px, 0, 0);
+}
+.NavItem:hover .NavMenuIcon{
+    color: var(--logoTextColor);
+    transition: 0.5s;
+    transform: translate3d(10px, 0, 0);
+}
+.NavMenu{
+    text-decoration: none;
+    color: var(--primaryTextColor);
+    font-weight: 500;
+}
+.NavList{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    gap: 15px;
+}
+.TopSpace{
+    margin-top: 20px;
+}
+.NavItem{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.NavButton{
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: var(--segoeFont);
+    font-weight: 500;
+    border: 1px solid rgb(99, 133, 245);
+    /* border: none; */
+    background-color: #8650F6;
+    color: #ffffff;
+}
+
