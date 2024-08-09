@@ -2,7 +2,6 @@
     width: 90%;
     margin: 50px auto;
     display: grid;
-    justify-content: space-between;
     grid-template-columns: repeat(4,1fr);
     gap: 50px;
     
@@ -31,4 +30,12 @@
 .product-card h1{
     color: var(--secondaryTextColor);
     text-align: start;
+}
+@media(max-width:1200px){
+    .product-flex-container {
+        grid-template-columns: repeat(2,1fr);
+    }
+    .product-card{
+        border: 1px solid white;
+    }
 }

@@ -13,7 +13,7 @@ const FaqComp = (props) => {
   };
 
   return (
-    <div className="faq-column">
+    <div className="faq-column remove-border-bottm">
       <div onClick={() => toggleData(props.id)} className="faq-table-contents">
         <h4>{props.data}</h4>
         <h4 className={`plus ${data === props.id ? "rotate" : ""}`}>+</h4>

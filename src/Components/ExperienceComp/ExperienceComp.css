@@ -11,9 +11,7 @@
 }
 .years-sec:hover .des{
     cursor: pointer;
-    transition: 0.7s;
-
-    
+    transition: 0.7s;    
     background: linear-gradient(200deg, #36E0FF, #8650F6);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -30,4 +28,13 @@
     flex-direction: column;
     gap: 10px;
     cursor: pointer;
+}
+@media(max-width:1200px){
+    .year{
+        font-size: 40px;
+    }
+    .des{
+        font-size: 18px;
+    }
+    
 }

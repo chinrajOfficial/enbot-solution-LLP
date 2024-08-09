@@ -85,11 +85,13 @@
 }
 .service-section{
     color: white;
+    height: 100%;
     margin-top: 40px;
     
 }
 .service-intro-section{
-    width: 100%;
+    width: 100%;    
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -146,6 +148,7 @@
 }
 .services-grid-container{
     width: 90%;
+    height: 100%;
     margin: 0 auto;
     margin-top: 60px;
     display: grid;
@@ -159,6 +162,7 @@
 }
 .experience-container{
     width: 90%;
+    height: 100%;
     border-radius: 20px;
     margin: 150px auto 0 auto;
     background-image: url(../../Assets/shape-dotted-dark-02.svg);
@@ -256,10 +260,83 @@
     font-size: 34px;
 }
 .faqs-contents{
-    width: 30%      ;
+    width: 30%;
 }
 .faqs-table-container{
     width: 50%;
-    /* height: 60vh; */
-    border: 1px solid #ccc;
+    border: 1px solid #2D2E41;
+    background-color: #17182d62;
 }
+.MenuIcon{
+    color: white;
+    font-size: 20px;
+    display: none;
+    /* visibility: hidden; */
+}
+.NavIcons{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.sec-3{
+    height: 100%;
+}
+@media(max-width:1200px){
+    .navbar{
+        width: 85%;
+    }
+    .MenuIcon{
+        display: block;
+        font-size: 50px;
+        cursor: pointer;
+    }
+    .nav-menus{
+        display: none;
+    }
+    .mode-btn{
+        padding: 15px 30px;
+        font-size: 24px;
+    }
+    .service-intro-section{
+        width: 85%;
+        margin: 0 auto;
+        align-items: center;
+    }
+    .service-intro-section p{
+       text-align: start;
+       width: 90%;
+    }
+    .baloon{
+        height: 250px;
+        z-index: -5;
+    }
+    .ex-menu-container p {
+        font-size: 22px;
+    }
+    .productivity-container{
+        padding: 50px;
+    }
+    .productivity-container img{
+        display: none;
+    }
+    .productivity-contents{
+        width: 70%;
+    }
+    .productivity-contents p{
+        margin-top: 24px;
+        line-height: 30px;
+    }
+    .faqs-table-container {
+        width: 65%;
+    }
+    .faqs-contents h1 {
+        font-size: 25px;
+    }
+    
+    /* .faq-table-contents{
+        text-align: center;
+        gap: 20px;
+    } */
+    
+}
+

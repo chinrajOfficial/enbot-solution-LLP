@@ -30,6 +30,8 @@ import RocketManImg from "../../Assets/RocketManImg.png";
 import { FaArrowRight } from "react-icons/fa6";
 import Faq from "../FaqComp/FaqComp";
 import FaqComp from "../FaqComp/FaqComp";
+import Footer from "../FooterComp/Footer";
+import { IoMenu } from "react-icons/io5";
 const SCROLL_DURATION = 1000;
 
 const Main = () => {
@@ -76,7 +78,10 @@ const Main = () => {
             </ScrollLink>
           </li>
         </ul>
-        <button className="mode-btn">Enroll Now !</button>
+        <div className="NavIcons">
+          <button className="mode-btn">Enroll Now !</button>
+          <IoMenu className="MenuIcon"/>
+        </div>
       </nav>
 
       <Element name="home">
@@ -148,7 +153,7 @@ const Main = () => {
         </div>
       </Element>
 
-      <Element name="about">
+      <Element name="about" className="sec-3">
         <WhoWeAre
           title="Who We Are."
           des="We are a team of problem solvers driven by growth strategists and experts in machine learning and analytics. We tackle our clients' most challenging issues in automation, digital growth, data democratization, data-led transformations, and scaling. Specializing in building data products with machine learning and AI, we excel in predictive analytics, NLP engineering, computer vision, and deep learning."
@@ -284,7 +289,9 @@ const Main = () => {
         </div>
 
       </section>
+      <Footer />
     </div>
+    
   );
 };
 

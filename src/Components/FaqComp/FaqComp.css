@@ -1,13 +1,13 @@
 .faq-column{
     width: 100%;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #2D2E41;
     padding: 30px 40px;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
+
 .faq-table-contents{
-    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -31,4 +31,9 @@
     color: gray;
     font-weight: 500;
     line-height: 25px;
+}
+@media(max-width:1200px){
+    .faq-table-contents{
+        gap: 30px;
+    }
 }
