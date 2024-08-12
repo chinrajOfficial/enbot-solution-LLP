@@ -95,5 +95,39 @@
     .intro-text p{
         font-size: 14px;
     }
-
+    
+}
+@media(max-width:600px){
+    .right-side-container{
+        width: 100%;
+    }
+    .intro-section {
+        width: 100%;
+    }
+    .home-container{
+        height: 100%;
+        width: 80%;
+    }
+    .intro-text{
+        width: 100%;
+    }
+    .AssetImg1{
+        height: 120px;
+    }
+    .intro-image{
+        width: 90%;
+        border-radius: 20px;
+    }
+    .intro-text h1{
+        font-size: 25px;
+    }
+    .highlight{
+        font-size: 35px;
+    }
+    .wh-i-do-container {
+        width: 80%;
+    }
+    .growth-image {
+        width: 100%;
+    }
 }

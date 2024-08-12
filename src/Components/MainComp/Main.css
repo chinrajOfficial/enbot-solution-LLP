@@ -333,10 +333,95 @@
         font-size: 25px;
     }
     
-    /* .faq-table-contents{
-        text-align: center;
-        gap: 20px;
-    } */
-    
 }
 
+@media(max-width:600px){
+    .navbar{
+        width: 90%;
+        height: 120px;
+        margin-bottom: 20px;
+    }
+    .nav-logo{
+        height: 70px;
+    }
+    .mode-btn{
+        font-size: 12px;
+        padding: 10px 12px;
+    }
+    .MenuIcon{
+        font-size: 30px;
+    }
+    
+    .intro-section{
+        height: 100%;
+        flex-direction: column;
+        gap: 50px;
+    }
+    .main-container{
+        height: 100%;
+    }
+    .service-intro-section h1{
+        font-size: 22px;
+    }
+    .service-intro-section p {
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+    }
+    .services-grid-container{
+        width: 80%;
+    }
+    .service-intro-section p{
+        width: 90%;
+    }
+    .ex-menu-container h1 {
+        font-size: 30px;
+    }
+    .baloon{
+        height: 160px;
+    }
+    .experience-container{
+        padding: 10px 10px;
+    }
+    .yeares-container{
+        margin-top: 50px;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        row-gap: 50px;
+    }
+    .snake-shape-img{
+        height: 120px;
+        bottom: -15%;
+    }
+    .productivity-container {
+        width: 80%;
+        padding: 50px 30px;
+        flex-direction: column;
+        gap: 40px;
+        border-radius: 10px 60px 10px 60px;
+    }
+    .productivity-contents{
+        width: 100%;
+    }
+    .productivity-contents h1{
+        font-size: 24px;
+    }
+    .productivity-contents p{
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .faqs-container{
+        width: 80%;
+        flex-direction: column;
+        gap: 50px;
+    }
+    .faqs-contents{
+        width: 100%;
+        text-align: center;
+    }
+    .faqs-table-container{
+        width: 100%;
+    }
+
+}

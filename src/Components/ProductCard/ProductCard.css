@@ -38,4 +38,12 @@
     .product-card{
         border: 1px solid white;
     }
+    
+}
+@media(max-width:600px){
+    .product-flex-container{
+        width: 80%;
+        grid-template-columns: repeat(1,1fr);
+    }
+    
 }

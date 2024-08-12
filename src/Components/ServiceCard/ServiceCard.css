@@ -56,3 +56,12 @@
     }
     
 }
+@media(max-width:600px){
+    .services-grid-container{
+        grid-template-columns: repeat(1, 1fr);
+        height: 100%;
+    }
+    .grid-cards h1 {
+        font-size: 23px;
+    }
+}
