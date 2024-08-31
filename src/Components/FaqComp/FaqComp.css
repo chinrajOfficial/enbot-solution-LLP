@@ -13,7 +13,7 @@
     align-items: center;
 }
 .faq-table-contents h4{
-    color: #ffffff;
+    color: var(--whiteColor);
     font-size: 20px;
     font-weight: 500;
     text-decoration: none;
