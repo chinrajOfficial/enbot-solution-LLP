@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Main.css";
 import { Link as ScrollLink, Element } from "react-scroll";
 import NavCard from "../NavCardComp/NavCard";
 import HomeImg from "../../Assets/HomePageImg.png";
 import LogoLight from "../../Assets/LogoLight.png";
-import { MdOutlineDarkMode } from "react-icons/md";
+import { MdOutlineDarkMode, MdDarkMode } from "react-icons/md";
 import Shape1 from "../../Assets/Shape1.png";
 import Shape2 from "../../Assets/Shape2.svg";
 import Shape3 from "../../Assets/Shape3.svg";
@@ -32,13 +32,43 @@ import Faq from "../FaqComp/FaqComp";
 import FaqComp from "../FaqComp/FaqComp";
 import Footer from "../FooterComp/Footer";
 import { IoMenu } from "react-icons/io5";
+import { SiPlatformio } from "react-icons/si";
+
 const SCROLL_DURATION = 1000;
 
 const Main = () => {
+  const [hide, setHide] = useState(false)
+  const changeToDarkTheme = () => {
+    document.documentElement.style.setProperty('--primaryTextColor', '#3F3E3E');
+    document.documentElement.style.setProperty('--secondaryTextColor', '#9596AC');
+    document.documentElement.style.setProperty('--backgroundColor', '#0F0715');
+    setHide(!hide)
+
+  }
+
+  const changeToLightTheme = () => {
+    document.documentElement.style.setProperty('--primaryTextColor', '#3F3E3E');
+    document.documentElement.style.setProperty('--secondaryTextColor', '#9596AC');
+    document.documentElement.style.setProperty('--backgroundColor', '#FFFFFF');
+    setHide(!hide)
+  };
+
+
+  const handleScroll = () => {
+    const navbar = document.getElementById("navbar");
+    if (window.pageYOffset > navbar.offsetTop) {
+        navbar.classList.add("sticky");
+    } else {
+        navbar.classList.remove("sticky");
+    }
+};
+
+window.addEventListener("scroll", handleScroll);
+
   return (
     <div className="main-container">
       {/* <NavCard /> */}
-      <nav className="navbar">
+      <nav id="navbar" className="navbar">
         <img className="nav-logo" src={LogoLight} alt="" />
         <ul className="nav-menus">
           <li>
@@ -79,8 +109,13 @@ const Main = () => {
           </li>
         </ul>
         <div className="NavIcons">
-          <button className="mode-btn">Enroll Now !</button>
+          <button className="mode-btn"><SiPlatformio /> Enquiry</button>
           <IoMenu className="MenuIcon"/>
+          <div>
+           {!hide &&  <MdOutlineDarkMode onClick={changeToLightTheme} className="light-mode"/>}
+            {/* <MdDarkMode onClick={changeToDarkTheme} className="dark-mode"/> */}
+            {hide && <MdDarkMode onClick={changeToDarkTheme} className="dark-mode"/>}
+          </div>
         </div>
       </nav>
 

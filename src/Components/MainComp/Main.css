@@ -1,12 +1,23 @@
 
-.navbar{
-    width: 90%;
-    margin: 0 auto;
+.navbar {
+    width: 100%;
+    padding: 0 5%;
     height: 20vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-family: var(--segoeFont);
+    position: relative;
+    top: 0;
+    transition: background-color 0.3s, box-shadow 0.1s; 
+}
+.sticky {
+    position: fixed;
+    top: 0;
+    background-color: #0F0715;
+    box-shadow: 0 4px 8px rgba(139, 134, 150, 0.3);
+    padding: 0 5%;
+    z-index: 10;
 }
 .nav-menus{
     width: 40%;
@@ -36,18 +47,18 @@
     left: 0;
     width: 0;
     height: 1.4px;
-    background: linear-gradient(90deg, #36E0FF, #FFFFFF);
+    background: linear-gradient(90deg, var(--firstgradientColor), var(--whiteColor));
     transition: width 0.3s ease-in-out;
 }
 .nav-menus li a:hover::before {
     width: 100%;
 }
 .nav-menus li a:hover {
-    background: linear-gradient(90deg, #36E0FF, #FFFFFF);
+    background: linear-gradient(90deg, var(--firstgradientColor), var(--whiteColor));
     -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent;
     padding-bottom: 2px;
-    border-image: linear-gradient(90deg, #36E0FF, #FFFFFF) 1;
+    border-image: linear-gradient(90deg, var(--firstgradientColor), var(--whiteColor)) 1;
 }
 
 .nav-active-menu{
@@ -56,6 +67,16 @@
     cursor: pointer;
     
 }
+.light-mode{
+    color: var(--whiteColor);
+    font-size: 20px;
+    cursor: pointer;
+}
+.dark-mode{
+    color: var(--whiteColor);
+    font-size: 20px;
+    cursor: pointer;
+}
 .ModeIcon{
     font-size:25px;
     font-weight: 400;
@@ -63,18 +84,18 @@
     cursor: pointer;
 }
 .mode-btn{
-    padding: 15px 15px;
+    padding: 15px 25px;
     letter-spacing: 1px;
-    color: white;
+    color: var(--whiteColor);
     font-size: 14px;
     border-radius: 14px 0px 14px 0px;
     font-family: var(--popinFont);
-    background: linear-gradient(20deg, #36E0FF, #8650F6);
+    background: linear-gradient(20deg, var(--firstgradientColor), var(--secondgradientColor));
     border: none;
     cursor: pointer;
 }
 .mode-btn:hover{
-    background: linear-gradient(200deg, #36E0FF, #8650F6);
+    background: linear-gradient(200deg, var(--firstgradientColor), var(--secondgradientColor));
     border-radius: 0px 14px 0px 14px;
 }
 .mode-btn:active{
@@ -112,13 +133,13 @@
 .u-line{
     width: 60px;
     height: 2px;
-    background-color: #FFFFFF;
+    background-color: var(--whiteColor);
     margin-top: 3px;
     opacity: 0;
 }
 .sec-headers{
     font-size: 40px;
-    background: linear-gradient(20deg, #36E0FF, #8650F6);
+    background: linear-gradient(20deg, var(--firstgradientColor), var(--secondgradientColor));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     cursor: pointer;
@@ -133,7 +154,7 @@
     left: 0;
     width: 0;
     height: 1.4px;
-    background: linear-gradient(90deg, #36E0FF, #FFFFFF);
+    background: linear-gradient(90deg, var(--firstgradientColor), var(--whiteColor));
     transition: width 0.5s ease-in-out;
 }
 .sec-headers:hover::before {
@@ -235,7 +256,7 @@
     background-color: #ccc;
 }
 .reach-us-btn:hover{
-    background-color: #FFFFFF;
+    background-color: var(--whiteColor);
 }
 .reach-us-btn span{
     font-weight: 600;
@@ -283,7 +304,8 @@
 }
 @media(max-width:1200px){
     .navbar{
-        width: 85%;
+        width: 100%;
+        height: 190px;
     }
     .MenuIcon{
         display: block;
@@ -337,8 +359,8 @@
 
 @media(max-width:600px){
     .navbar{
-        width: 90%;
-        height: 120px;
+        width: 100%;
+        height: 100px;
         margin-bottom: 20px;
     }
     .nav-logo{

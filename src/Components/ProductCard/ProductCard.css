@@ -20,7 +20,14 @@
     border-radius: 20px;
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
-
+.product-card:hover{
+    cursor: pointer;
+    scale: 105%;
+    transition: .2s ;
+    box-shadow: 0 0 2px aqua;
+    background: rgb(0,12,36);
+    background: linear-gradient(180deg, rgba(4, 21, 54, 0.84) 0%, rgba(16, 25, 41, 0.869) 39%, rgba(0, 213, 255, 0.105) 100%);
+}
 .product-card p{
     color: var(--secondaryTextColor);
     font-size: 18px;
@@ -36,7 +43,7 @@
         grid-template-columns: repeat(2,1fr);
     }
     .product-card{
-        border: 1px solid white;
+        border: 1px solid var(--whiteColor);
     }
     
 }

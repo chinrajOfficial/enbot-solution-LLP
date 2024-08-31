@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #0F0715;
+  background-color: var(--backgroundColor);
   /* background: linear-gradient(135deg, #121212 0%, #8650F6 50%, #000000 100%); */
 }
 html {
@@ -29,4 +29,7 @@ code {
   --quickFont:  "Quicksand", sans-serif;
   --popinFont:  "Poppins", sans-serif;
   --segoeFont:  'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --firstgradientColor: #36E0FF;
+  --secondgradientColor: #8650F6;
+  --backgroundColor: #0F0715;
 }

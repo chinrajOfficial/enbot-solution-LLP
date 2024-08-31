@@ -28,7 +28,7 @@
     transform: rotate(45deg);
   }
 .faq-column p{
-    color: gray;
+    color: var(--secondaryTextColor);
     font-weight: 500;
     line-height: 25px;
 }
@@ -36,4 +36,12 @@
     .faq-table-contents{
         gap: 30px;
     }
+}
+@media(max-width:600px){
+   .faq-column{
+    padding: 30px 20px;
+   }
+   .faq-table-contents h4{
+    font-size: 18px;
+   }
 }
