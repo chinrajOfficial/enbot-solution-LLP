@@ -27,7 +27,7 @@
     letter-spacing: 3px;
 }
 .contact-mail{
-    color: var(--whiteColor) !important;
+    color: var(--footerMailColor) !important;
     font-size: 18px;
     text-decoration: none;
 }
@@ -47,7 +47,7 @@
 .footer-first-container img{
     width: 200px;
     margin-bottom: 20px;
-    object-fit: cover;
+    /* object-fit: cover; */
 }
 .footer-first-container{
     width: 35%;
@@ -180,5 +180,8 @@
     }
     .f-icons{
         font-size: 16px;
+    }
+    .footer-first-container img{
+        width: 170px;
     }
 }

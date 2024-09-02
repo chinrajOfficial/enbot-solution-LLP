@@ -78,6 +78,7 @@ const Main = () => {
     document.documentElement.style.setProperty('--footerIconsColor', '#FFFFFF');
     document.documentElement.style.setProperty('--footerIconsHoverColor', '#36E0FF');
     document.documentElement.style.setProperty('--footerIconsHoverColor', '#FFFFFF');
+    document.documentElement.style.setProperty('--footerMailColor', '#FFFFFF');
     
     setHide(!hide)
     setIsDarkMode(true);
@@ -119,6 +120,7 @@ const Main = () => {
     document.documentElement.style.setProperty('--footerIconsColor', '#3d3f4a');
     document.documentElement.style.setProperty('--footerIconsHoverColor', '#36E0FF');
     document.documentElement.style.setProperty('--footerBtnColor', '#3d3f4a');
+    document.documentElement.style.setProperty('--footerMailColor', '#0F0715');
 
     setHide(!hide)
     setIsDarkMode(false);
@@ -138,8 +140,6 @@ window.addEventListener("scroll", handleScroll);
     <div className="main-container">
       {/* <NavCard /> */}
       <nav id="navbar" className="navbar">
-        {/* <img className="nav-logo" src={DarkLogo} alt="" />
-        <img className="nav-logo" src={LightLogo} alt="" /> */}
         <img className="nav-logo" src={isDarkMode ? DarkLogo : LightLogo} alt="Logo" />
         <ul className="nav-menus">
           <li>
