@@ -79,6 +79,7 @@ const Main = () => {
     document.documentElement.style.setProperty('--footerIconsHoverColor', '#36E0FF');
     document.documentElement.style.setProperty('--footerIconsHoverColor', '#FFFFFF');
     document.documentElement.style.setProperty('--footerMailColor', '#FFFFFF');
+    document.documentElement.style.setProperty('--menuIconColor', '#FFFFFF');
     
     setHide(!hide)
     setIsDarkMode(true);
@@ -121,6 +122,7 @@ const Main = () => {
     document.documentElement.style.setProperty('--footerIconsHoverColor', '#36E0FF');
     document.documentElement.style.setProperty('--footerBtnColor', '#3d3f4a');
     document.documentElement.style.setProperty('--footerMailColor', '#0F0715');
+    document.documentElement.style.setProperty('--menuIconColor', '#0F0715');
 
     setHide(!hide)
     setIsDarkMode(false);
@@ -183,7 +185,6 @@ window.addEventListener("scroll", handleScroll);
           <button className="mode-btn"><SiPlatformio /> Enquiry</button>
           <div>
            {!hide &&  <MdDarkMode onClick={changeToLightTheme} className="light-mode"/>}
-            {/* <MdDarkMode onClick={changeToDarkTheme} className="dark-mode"/> */}
             {hide && <FiSun onClick={changeToDarkTheme} className="dark-mode"/>}
             
           </div>

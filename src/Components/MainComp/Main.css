@@ -287,7 +287,7 @@
     background-color: var(--tableBgColor);
 }
 .MenuIcon{
-    color: var(--whiteColor);
+    color: var(--menuIconColor);
     font-size: 20px;
     display: none;
 }
@@ -308,6 +308,7 @@
         display: block;
         font-size: 50px;
         cursor: pointer;
+        color: var(--menuIconColor);
     }
     .nav-menus{
         display: none;
@@ -375,6 +376,7 @@
     }
     .MenuIcon{
         font-size: 20px;
+        color: var(--menuIconColor);
     }
     
     .intro-section{

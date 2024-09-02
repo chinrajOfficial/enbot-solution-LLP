@@ -19,11 +19,11 @@ const Footer = () => {
         <div className='footer-container'>
             <div className='footer-datas-container'>
                 <div className='footer-first-container'>
-                    <img src={DarkLogo} alt="" />
+                    {/* <img src={DarkLogo} alt="" /> */}
                     <img src={LightLogo} alt="" />
                     <p>Unlock e-commerce intricacies with our advanced crawling solutions for a competitive boost.</p>
                     <p className='contact'>contact</p>
-                    <a className='contact-mail' href="">support@enbotsolutions.com</a>
+                    <p className='contact-mail'>support@enbotsolutions.com</p>
                 </div>
                 <div className='footer-second-child'>
                     <div className='footer-first-container'>

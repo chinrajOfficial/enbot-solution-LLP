@@ -29,7 +29,8 @@
 .contact-mail{
     color: var(--footerMailColor) !important;
     font-size: 18px;
-    text-decoration: none;
+    text-decoration: underline;
+    letter-spacing: 1px;
 }
 .contact-mail a:hover{
     text-decoration: underline;
@@ -98,7 +99,6 @@
     justify-content: space-between;
     align-items: center;
     height: 130px;
-    
 }
 .footer-icons{
     display: flex;
