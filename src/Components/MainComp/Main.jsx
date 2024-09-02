@@ -63,6 +63,21 @@ const Main = () => {
     document.documentElement.style.setProperty('--serviceCardBorderHoverColor', '#FFFFFF');
     document.documentElement.style.setProperty('--productCardFirstBgColor', '#0F0715');
     document.documentElement.style.setProperty('--productCardSecondBgColor', '#0F0715');
+    document.documentElement.style.setProperty('--productivityBgColor', '#17182d62');
+    document.documentElement.style.setProperty('--productivityHeaderColor', '#c9c9d7f1');
+
+    document.documentElement.style.setProperty('--tableBgColor', '#17182d62');
+    document.documentElement.style.setProperty('--tableBorderColor', '#2D2E41');
+    document.documentElement.style.setProperty('--tableTextColor', '#FFFFFF');
+
+    document.documentElement.style.setProperty('--footerBgColor', '#17182d62');
+    document.documentElement.style.setProperty('--footerBorderColor', '#bdbfeb62');
+    document.documentElement.style.setProperty('--footerAngerTextColor', '#9596AC');
+    document.documentElement.style.setProperty('--footerHeaderTextColor', '#9596AC');
+    document.documentElement.style.setProperty('--footerAngerHoverTextColor', '#FFFFFF');
+    document.documentElement.style.setProperty('--footerIconsColor', '#FFFFFF');
+    document.documentElement.style.setProperty('--footerIconsHoverColor', '#36E0FF');
+    document.documentElement.style.setProperty('--footerIconsHoverColor', '#FFFFFF');
     
     setHide(!hide)
     setIsDarkMode(true);
@@ -88,11 +103,26 @@ const Main = () => {
 
     document.documentElement.style.setProperty('--productCardFirstBgColor', '#f5f5f5');
     document.documentElement.style.setProperty('--productCardSecondBgColor', '#f5f5f5');
-    
+
+    document.documentElement.style.setProperty('--productivityBgColor', '#36E0FF');
+    document.documentElement.style.setProperty('--productivityHeaderColor', '#3d3f4a');
+
+    document.documentElement.style.setProperty('--tableBgColor', '#F5F5F5');
+    document.documentElement.style.setProperty('--tableBorderColor', '#2D2E41');
+    document.documentElement.style.setProperty('--tableTextColor', '#3F3E3E');
+
+    document.documentElement.style.setProperty('--footerBgColor', '#F5F5F5');
+    document.documentElement.style.setProperty('--footerBorderColor', '#000000');
+    document.documentElement.style.setProperty('--footerAngerTextColor', '#3d3f4a');
+    document.documentElement.style.setProperty('--footerHeaderTextColor', '#3F3E3E');
+    document.documentElement.style.setProperty('--footerAngerHoverTextColor', '#36E0FF');
+    document.documentElement.style.setProperty('--footerIconsColor', '#3d3f4a');
+    document.documentElement.style.setProperty('--footerIconsHoverColor', '#36E0FF');
+    document.documentElement.style.setProperty('--footerBtnColor', '#3d3f4a');
+
     setHide(!hide)
     setIsDarkMode(false);
   };
-
   const handleScroll = () => {
     const navbar = document.getElementById("navbar");
     if (window.pageYOffset > navbar.offsetTop) {

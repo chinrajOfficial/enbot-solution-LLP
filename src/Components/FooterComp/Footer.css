@@ -1,21 +1,22 @@
 .footer-container{
     width: 100%;
     height: 100%;
-    background-color: #17182d62;
+    background-color: var(--footerBgColor);
     padding: 0px 30px 0 30px;
+    box-shadow: 0 -4px 6px -2px rgba(0, 0, 0, 0.3);
 }
 .footer-first-container a{
-    color: var(--secondaryTextColor);
+    color: var(--footerAngerTextColor);
     font-size: 18px;
     text-decoration: none;
 }
 .footer-first-container p{
-    color: var(--secondaryTextColor);
+    color: var(--footerAngerTextColor);
     font-size: 18px;
 
 }
 .footer-first-container a:hover{
-    color: var(--whiteColor);
+    color: var(--footerAngerHoverTextColor);
     font-size: 18px;
     transform: translateX(20px);
     transition: 0.5s;
@@ -40,11 +41,10 @@
     display: flex;
     justify-content: space-between;
     gap: 40px;
-    border-bottom: 1px solid #bdbfeb62;
+    border-bottom: 1px solid var(--footerBorderColor);
     padding: 80px 0;
 }
 .footer-first-container img{
-    /* height: 75px; */
     width: 200px;
     margin-bottom: 20px;
     object-fit: cover;
@@ -56,7 +56,7 @@
     gap: 20px;
 }
 .footer-first-container h2{
-    color: #c9c9d7f1;
+    color: var(--footerHeaderTextColor);
 }
 .foter-input-container{
     width: 100%;
@@ -68,12 +68,12 @@
     width: 100%;
     height: 100%;
     border: none;
-    color: var(--whiteColor);
+    color: var(--footerAngerTextColor);
     font-size: 16px;
     padding: 0px 50px 0 10px;
     background: none;
     border-radius: 20px;
-    box-shadow: 0 0 0 1px #bdbfeb62;
+    box-shadow: 0 0 0 1px var(--footerBorderColor);
 }
 .foter-input-container input::placeholder{
     color: var(--secondaryTextColor);
@@ -87,7 +87,7 @@
     right: 0;
     background: none;
     border: none;
-    color: var(--whiteColor);
+    color: var(--footerBtnColor);
     font-size: 20px;
     cursor: pointer;
 }
@@ -106,12 +106,12 @@
     gap: 20px;
 }
 .f-icons{
-    color: var(--whiteColor);
+    color: var(--footerIconsColor);
     font-size: 20px;
     cursor: pointer;
 }
 .f-icons:hover{
-    color: aqua;
+    color: var(--footerIconsHoverColor);
     transition: .5s;
 }
 .footer-p{

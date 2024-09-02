@@ -1,16 +1,28 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
 import './Footer.css'
-import FooterLogo from '../../Assets/Logo.png'
+import DarkLogo from "../../Assets/DarkLogoTheme.png";
+import LightLogo from "../../Assets/LogoLight.png"
 import { VscSend } from "react-icons/vsc";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa6";
 import { FaTwitter } from "react-icons/fa";
 const Footer = () => {
+    const [hide, setHide] = useState(false)
+    const [isDarkMode, setIsDarkMode] = useState(true);
+    const changeToDarkTheme = () => {
+        setHide(!hide)
+        setIsDarkMode(true);
+    }
+
+    const changeToLightTheme = () => {
+        setHide(!hide)
+        setIsDarkMode(false);
+    }
   return (
     <div>
         <div className='footer-container'>
             <div className='footer-datas-container'>
                 <div className='footer-first-container'>
-                    <img src={FooterLogo} alt="" />
+                    <img className="nav-logo" src={isDarkMode ? DarkLogo : LightLogo} alt="Logo" />
                     <p>Unlock e-commerce intricacies with our advanced crawling solutions for a competitive boost.</p>
                     <p className='contact'>contact</p>
                     <a className='contact-mail' href="">support@enbotsolutions.com</a>

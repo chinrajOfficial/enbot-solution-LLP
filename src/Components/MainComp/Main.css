@@ -223,7 +223,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #17182d62;
+    background-color: var(--productivityBgColor);
     padding: 0 50px;
     border-radius: 10px 100px 10px 100px;
 }
@@ -232,7 +232,7 @@
     text-align: start;
 }
 .productivity-contents h1{
-    color: #c9c9d7f1;
+    color: var(--productivityHeaderColor);
     font-size: 35px;
 }
 .productivity-contents p{
@@ -275,7 +275,7 @@
     margin-bottom: 10px;
 }
 .faqs-contents h1{
-    color: #c9c9d7f1;
+    color: var(--productivityHeaderColor);
     font-size: 34px;
 }
 .faqs-contents{
@@ -283,11 +283,11 @@
 }
 .faqs-table-container{
     width: 50%;
-    border: 1px solid #2D2E41;
-    background-color: #17182d62;
+    border: 1px solid var(--tableBorderColor);
+    background-color: var(--tableBgColor);
 }
 .MenuIcon{
-    color: white;
+    color: var(--whiteColor);
     font-size: 20px;
     display: none;
 }
@@ -331,6 +331,7 @@
     }
     .ex-menu-container p {
         font-size: 22px;
+        
     }
     .productivity-container{
         padding: 50px;
@@ -350,6 +351,7 @@
     }
     .faqs-contents h1 {
         font-size: 25px;
+        color: var(--secondaryTextColor);
     }
     
 }
