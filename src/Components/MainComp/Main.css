@@ -361,14 +361,18 @@
         margin-bottom: 20px;
     }
     .nav-logo{
-        height: 70px;
+        height: 60px;
     }
     .mode-btn{
-        font-size: 12px;
+        font-size: 10px;
         padding: 10px 12px;
+        border-radius: 10px 0px 10px 0px;
+    }
+    .mode-btn:hover{
+        border-radius: 0px 10px 0px 10px;
     }
     .MenuIcon{
-        font-size: 30px;
+        font-size: 20px;
     }
     
     .intro-section{

@@ -33,6 +33,7 @@ import Faq from "../FaqComp/FaqComp";
 import FaqComp from "../FaqComp/FaqComp";
 import Footer from "../FooterComp/Footer";
 import { IoMenu } from "react-icons/io5";
+import { TfiMenuAlt } from "react-icons/tfi";
 import { SiPlatformio } from "react-icons/si";
 import { FiSun } from "react-icons/fi";
 const SCROLL_DURATION = 1000;
@@ -150,13 +151,13 @@ window.addEventListener("scroll", handleScroll);
         </ul>
         <div className="NavIcons">
           <button className="mode-btn"><SiPlatformio /> Enquiry</button>
-          <IoMenu className="MenuIcon"/>
           <div>
            {!hide &&  <MdDarkMode onClick={changeToLightTheme} className="light-mode"/>}
             {/* <MdDarkMode onClick={changeToDarkTheme} className="dark-mode"/> */}
             {hide && <FiSun onClick={changeToDarkTheme} className="dark-mode"/>}
             
           </div>
+          <TfiMenuAlt className="MenuIcon"/>
         </div>
       </nav>
 
