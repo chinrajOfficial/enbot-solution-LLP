@@ -49,12 +49,14 @@
 }
 .intro-text h1{
     font-size: 50px;
-    color: #c9c9d7f1;
+    background: linear-gradient(350deg, var(--homeFirstHeadingColor), var(--homeSecondHeadingColor));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .highlight{
     font-size: 48px;
     font-weight: bold;
-    background: linear-gradient(250deg, #36E0FF, #8650F6);
+    background: linear-gradient(250deg, var(--firstgradientColor), var(--secondgradientColor));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -63,6 +65,7 @@
     font-size: 18px;
     margin-top: 16px;
     line-height: 27px;
+    color: var(--secondaryTextColor);
 }
 
 .growth-image{

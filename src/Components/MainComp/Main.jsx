@@ -3,7 +3,8 @@ import "./Main.css";
 import { Link as ScrollLink, Element } from "react-scroll";
 import NavCard from "../NavCardComp/NavCard";
 import HomeImg from "../../Assets/HomePageImg.png";
-import LogoLight from "../../Assets/LogoLight.png";
+import DarkLogo from "../../Assets/DarkLogoTheme.png";
+import LightLogo from "../../Assets/LogoLight.png";
 import { MdOutlineDarkMode, MdDarkMode } from "react-icons/md";
 import Shape1 from "../../Assets/Shape1.png";
 import Shape2 from "../../Assets/Shape2.svg";
@@ -33,26 +34,63 @@ import FaqComp from "../FaqComp/FaqComp";
 import Footer from "../FooterComp/Footer";
 import { IoMenu } from "react-icons/io5";
 import { SiPlatformio } from "react-icons/si";
-
+import { FiSun } from "react-icons/fi";
 const SCROLL_DURATION = 1000;
 
 const Main = () => {
   const [hide, setHide] = useState(false)
+  const [isDarkMode, setIsDarkMode] = useState(true);
   const changeToDarkTheme = () => {
+    document.documentElement.style.setProperty('--navStickyBgcolor', '#0F0715');
+    document.documentElement.style.setProperty('--navFirstMenuColor', '#36E0FF');
+    document.documentElement.style.setProperty('--navSecondMenuColor', '#8650F6');
+    document.documentElement.style.setProperty('--menuIconColor', '#FFFFFF');
     document.documentElement.style.setProperty('--primaryTextColor', '#3F3E3E');
     document.documentElement.style.setProperty('--secondaryTextColor', '#9596AC');
     document.documentElement.style.setProperty('--backgroundColor', '#0F0715');
+    document.documentElement.style.setProperty('--homeFirstHeadingColor', '#c9c9d7f1');
+    document.documentElement.style.setProperty('--homeSecondHeadingColor', '#c9c9d7f1');
+    document.documentElement.style.setProperty('--firstgradientColor', '#36E0FF');
+    document.documentElement.style.setProperty('--secondgradientColor', '#8650F6');
+    document.documentElement.style.setProperty('--whiteColor', '#FFFFFF');
+    document.documentElement.style.setProperty('--activeMenuColor', '#2ECAFF');
+    document.documentElement.style.setProperty('--serviceCardBgColor', 'rgb(9, 1, 29)');
+    document.documentElement.style.setProperty('--serviceCardSecondBgColor', '#0F0715');
+    document.documentElement.style.setProperty('--serviceImgFirstBgColor', '#36E0FF');
+    document.documentElement.style.setProperty('--serviceImgSecondBgColor', '#8650F6');
+    document.documentElement.style.setProperty('--serviceCardBorderColor', 'transparent');
+    document.documentElement.style.setProperty('--serviceCardBorderHoverColor', '#FFFFFF');
+    document.documentElement.style.setProperty('--productCardFirstBgColor', '#0F0715');
+    document.documentElement.style.setProperty('--productCardSecondBgColor', '#0F0715');
+    
     setHide(!hide)
-
+    setIsDarkMode(true);
   }
 
   const changeToLightTheme = () => {
-    document.documentElement.style.setProperty('--primaryTextColor', '#3F3E3E');
-    document.documentElement.style.setProperty('--secondaryTextColor', '#9596AC');
-    document.documentElement.style.setProperty('--backgroundColor', '#FFFFFF');
-    setHide(!hide)
-  };
+    document.documentElement.style.setProperty('--backgroundColor', '#F5F5F5');
+    document.documentElement.style.setProperty('--secondaryTextColor', '#3d3f4a');
+    document.documentElement.style.setProperty('--navStickyBgcolor', '#F5F5F5');
+    document.documentElement.style.setProperty('--navFirstMenuColor', '#7078F9');
+    document.documentElement.style.setProperty('--navSecondMenuColor', '#7E5EF7');
+    document.documentElement.style.setProperty('--activeMenuColor', '#7078F9');
+    document.documentElement.style.setProperty('--menuIconColor', '#000000');
+    document.documentElement.style.setProperty('--homeFirstHeadingColor', '#36E0FF');
+    document.documentElement.style.setProperty('--homeSecondHeadingColor', '#8650F6');
 
+    document.documentElement.style.setProperty('--serviceCardBgColor', '#ffffff');
+    document.documentElement.style.setProperty('--serviceCardSecondBgColor', 'rgb(171, 224, 240, 0.932)');
+    document.documentElement.style.setProperty('--serviceImgFirstBgColor', '#ffffff');
+    document.documentElement.style.setProperty('--serviceImgSecondBgColor', '#a5edf4');
+    document.documentElement.style.setProperty('--serviceCardBorderColor', '#ffffff');
+    document.documentElement.style.setProperty('--serviceCardBorderHoverColor', '#0F0715');
+
+    document.documentElement.style.setProperty('--productCardFirstBgColor', '#f5f5f5');
+    document.documentElement.style.setProperty('--productCardSecondBgColor', '#f5f5f5');
+    
+    setHide(!hide)
+    setIsDarkMode(false);
+  };
 
   const handleScroll = () => {
     const navbar = document.getElementById("navbar");
@@ -69,7 +107,9 @@ window.addEventListener("scroll", handleScroll);
     <div className="main-container">
       {/* <NavCard /> */}
       <nav id="navbar" className="navbar">
-        <img className="nav-logo" src={LogoLight} alt="" />
+        {/* <img className="nav-logo" src={DarkLogo} alt="" />
+        <img className="nav-logo" src={LightLogo} alt="" /> */}
+        <img className="nav-logo" src={isDarkMode ? DarkLogo : LightLogo} alt="Logo" />
         <ul className="nav-menus">
           <li>
             <ScrollLink
@@ -112,9 +152,10 @@ window.addEventListener("scroll", handleScroll);
           <button className="mode-btn"><SiPlatformio /> Enquiry</button>
           <IoMenu className="MenuIcon"/>
           <div>
-           {!hide &&  <MdOutlineDarkMode onClick={changeToLightTheme} className="light-mode"/>}
+           {!hide &&  <MdDarkMode onClick={changeToLightTheme} className="light-mode"/>}
             {/* <MdDarkMode onClick={changeToDarkTheme} className="dark-mode"/> */}
-            {hide && <MdDarkMode onClick={changeToDarkTheme} className="dark-mode"/>}
+            {hide && <FiSun onClick={changeToDarkTheme} className="dark-mode"/>}
+            
           </div>
         </div>
       </nav>

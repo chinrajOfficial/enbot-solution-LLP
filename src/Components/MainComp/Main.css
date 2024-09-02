@@ -14,7 +14,7 @@
 .sticky {
     position: fixed;
     top: 0;
-    background-color: #0F0715;
+    background-color: var(--navStickyBgcolor);
     box-shadow: 0 4px 8px rgba(139, 134, 150, 0.3);
     padding: 0 5%;
     z-index: 10;
@@ -47,33 +47,31 @@
     left: 0;
     width: 0;
     height: 1.4px;
-    background: linear-gradient(90deg, var(--firstgradientColor), var(--whiteColor));
+    background: linear-gradient(90deg, var(--navFirstMenuColor), var(--whiteColor));
     transition: width 0.3s ease-in-out;
 }
 .nav-menus li a:hover::before {
     width: 100%;
 }
 .nav-menus li a:hover {
-    background: linear-gradient(90deg, var(--firstgradientColor), var(--whiteColor));
+    background: linear-gradient(90deg, var(--navFirstMenuColor), var(--navSecondMenuColor));
     -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent;
     padding-bottom: 2px;
-    border-image: linear-gradient(90deg, var(--firstgradientColor), var(--whiteColor)) 1;
+    border-image: linear-gradient(90deg, var(--navFirstMenuColor), var(--navSecondMenuColor)) 1;
 }
-
 .nav-active-menu{
-    color: #2ECAFF !important;
+    color: var(--activeMenuColor) !important;
     padding-bottom: 2px;
     cursor: pointer;
-    
 }
 .light-mode{
-    color: var(--whiteColor);
+    color: var(--menuIconColor);
     font-size: 20px;
     cursor: pointer;
 }
 .dark-mode{
-    color: var(--whiteColor);
+    color: var(--menuIconColor);
     font-size: 20px;
     cursor: pointer;
 }
@@ -292,7 +290,6 @@
     color: white;
     font-size: 20px;
     display: none;
-    /* visibility: hidden; */
 }
 .NavIcons{
     display: flex;

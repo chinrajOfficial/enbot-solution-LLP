@@ -21,15 +21,35 @@ code {
   box-sizing: border-box;
 }
 :root{
-  --primaryTextColor: #3F3E3E;
-  --secondaryTextColor: #9596AC;
-  --logoTextColor: #8650F6;
-  --navItemBgColor: #C7C8FC;
-  --whiteColor: #FFFFFF;
   --quickFont:  "Quicksand", sans-serif;
   --popinFont:  "Poppins", sans-serif;
   --segoeFont:  'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  --navStickyBgcolor: #0F0715;
+  --navFirstMenuColor: #36E0FF;
+  --navSecondMenuColor: #85d2e9;
+  --navItemBgColor: #C7C8FC;
+  --activeMenuColor: #2ECAFF;
+  --menuIconColor: #ffffff;
+
   --firstgradientColor: #36E0FF;
   --secondgradientColor: #8650F6;
   --backgroundColor: #0F0715;
+  --homeFirstHeadingColor: #c9c9d7f1;
+  --homeSecondHeadingColor: #c9c9d7f1;
+  --primaryTextColor: #3F3E3E;
+  --secondaryTextColor: #9596AC;
+  --logoTextColor: #8650F6;
+  --whiteColor: #FFFFFF;
+
+  --serviceCardBgColor: rgb(9, 1, 29);
+  --serviceCardSecondBgColor: #0F0715;
+  --serviceImgFirstBgColor: #36E0FF ;
+  --serviceImgSecondBgColor: #8650F6 ;
+  --serviceCardBorderColor: transparent ;
+  --serviceCardBorderHoverColor: #ffffff ;
+
+  --productCardFirstBgColor: #0F0715;
+  --productCardSecondBgColor: #0F0715;
+
 }

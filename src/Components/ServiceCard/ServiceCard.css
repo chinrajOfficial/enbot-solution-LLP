@@ -1,7 +1,6 @@
 .grid-cards {
     width: 100%;
     height: 300px;
-    box-shadow: 0 0 2px rgba(245, 240, 240, 0.927);
     padding: 30px 20px 30px 30px;
     text-align: start;
     display: flex;
@@ -10,13 +9,16 @@
     gap: 20px;
     border-radius: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: linear-gradient(var(--serviceCardBgColor), var(--serviceCardSecondBgColor)) padding-box,
+              linear-gradient(to right, darkblue, darkorchid) border-box;
+    border-radius: 10px;
+    border: 1px solid var(--serviceCardBorderColor);
 }
 
 .grid-cards:hover {
-    background-color: #17182d62;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transform: scale(1.05);
     cursor: pointer;
+    border: 1px solid var(--serviceCardBorderHoverColor);
 }
 .img-background{
     cursor: pointer;
@@ -26,7 +28,7 @@
     justify-content: center;
     align-items: center;
     border-radius: 10px;
-    background: linear-gradient(20deg, var(--firstgradientColor), var(--secondgradientColor));
+    background: linear-gradient(20deg, var(--serviceImgFirstBgColor), var(--serviceImgSecondBgColor));
 }
 .grid-card-img{
     width: 40px;
@@ -50,9 +52,7 @@
         height: 100%;
     }
     .grid-cards{
-        box-shadow: 0 0 0px rgb(245 240 240 / 93%);
         height: 350px;
-        border: 1px solid white;
     }
     
 }
