@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
 import './NavCard.css';
 import Logo from '../../Assets/LogoLight.png'
 import { IoHomeOutline } from "react-icons/io5";
@@ -9,44 +9,37 @@ import { RiContactsLine } from "react-icons/ri";
 import { Link as ScrollLink, Element } from "react-scroll";
 import { SiPlatformio } from "react-icons/si";
 const SCROLL_DURATION = 1000;
-// import Main from '../MainComp/Main';
-const NavCard = () => {
+const NavCard = ({setIsCloseIc, isCloseIc}) => {
+  const changeMenuView = () => {
+    setIsCloseIc(!isCloseIc)
+    var navBar = document.getElementById('mobile-nav')
+    navBar.style.right = '-100%';
+    navBar.style.transition = '.5s ease-in';
+  }
   return (
     <div className='NavCard'>
-
-          {/* <ScrollLink className="footer-menus" to="services" spy={true} smooth={true} duration={200}>Services</ScrollLink>
-          <ScrollLink className="footer-menus" to="about" spy={true} smooth={true} duration={400}>About Us</ScrollLink>
-          <ScrollLink className="footer-menus" to="products" spy={true} smooth={true} duration={600}>Products</ScrollLink>
-          <ScrollLink className="footer-menus" to="contact" spy={true} smooth={true} duration={SCROLL_DURATION}>Contact Us</ScrollLink> */}
-
-
-        <ul className='NavList'>
-        {/* <img className='LogoImg' src={Logo} alt='Logo' /> */}
-            <li className='NavItem TopSpace'>
-                <IoHomeOutline className='NavMenuIcon'/>
-                <ScrollLink className="NavMenu" to="home" spy={true} smooth={true} duration={SCROLL_DURATION}>Home</ScrollLink>
+       <ul className='NavList'>
+            <li  onClick={changeMenuView} className='NavItem TopSpace'>
+                <IoHomeOutline onClick={changeMenuView} className='NavMenuIcon'/>
+                <ScrollLink className="NavMenu" to="home" spy={true} smooth={true} duration={SCROLL_DURATION} onClick={changeMenuView}>Home</ScrollLink>
             </li>
             <li className='NavItem'>
                 <MdOutlineMiscellaneousServices className='NavMenuIcon'/>
-                <ScrollLink className="NavMenu" to="services" spy={true} smooth={true} duration={200}>Services</ScrollLink>
+                <ScrollLink className="NavMenu" to="services" spy={true} smooth={true} duration={200} onClick={changeMenuView}>Services</ScrollLink>
             </li>
             <li className='NavItem'>
                 <LiaBookSolid className='NavMenuIcon'/>
-                <ScrollLink className="NavMenu" to="about" spy={true} smooth={true} duration={400}>About</ScrollLink>
+                <ScrollLink className="NavMenu" to="about" spy={true} smooth={true} duration={400} onClick={changeMenuView}>About</ScrollLink>
             </li>
             <li className='NavItem'>
                 <AiOutlineProduct className='NavMenuIcon'/>
-                <ScrollLink className="NavMenu" to="products" spy={true} smooth={true} duration={600}>Products</ScrollLink>
+                <ScrollLink className="NavMenu" to="products" spy={true} smooth={true} duration={600} onClick={changeMenuView}>Products</ScrollLink>
             </li>
             <li className='NavItem'>
                 <RiContactsLine className='NavMenuIcon'/>
-                <ScrollLink className="NavMenu" to="contact" spy={true} smooth={true} duration={SCROLL_DURATION}>Contact Us</ScrollLink>
+                <ScrollLink className="NavMenu" to="contact" spy={true} smooth={true} duration={SCROLL_DURATION} onClick={changeMenuView}>Contact Us</ScrollLink>
             </li>
         </ul>
-        <div className='SocialMedia'>
-            {/* <button className='NavButton'>Button</button> */}
-            <button className="NavButton"><SiPlatformio /> Enquiry</button>
-        </div>
     </div>
   );
 }

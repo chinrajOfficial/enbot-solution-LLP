@@ -37,13 +37,17 @@ import { TfiMenuAlt } from "react-icons/tfi";
 import { SiPlatformio } from "react-icons/si";
 import { FiSun } from "react-icons/fi";
 import { GrClose } from "react-icons/gr";
+import { RiCloseLargeLine } from "react-icons/ri";
 const SCROLL_DURATION = 1000;
 
 const Main = () => {
   const [hide, setHide] = useState(false)
   const [isDarkMode, setIsDarkMode] = useState(true);
-
   const [isCloseIc, setIsCloseIc] = useState(false);
+  const [isForm, setisForm] = useState(false);
+
+  const viewForm = () => {setisForm(true)}
+  const closeForm = () => {setisForm(false)}
 
   const changeToClose = () => {
     setIsCloseIc(!isCloseIc);
@@ -211,7 +215,7 @@ window.addEventListener("scroll", handleScroll);
           </li>
         </ul>
         <div className="NavIcons">
-          <button className="mode-btn"><SiPlatformio /> Enquiry</button>
+          <button onClick={viewForm} className="mode-btn"><SiPlatformio /> Enquiry</button>
           <div>
            {!hide &&  <MdDarkMode onClick={changeToLightTheme} className="light-mode"/>}
             {hide && <FiSun onClick={changeToDarkTheme} className="dark-mode"/>}
@@ -219,11 +223,27 @@ window.addEventListener("scroll", handleScroll);
 
           {!isCloseIc && <TfiMenuAlt onClick={changeToClose} className="MenuIcon"/>}
           {isCloseIc && <GrClose onClick={changeToMenu} className="MenuIcon"/>}
-
         </div>
       </nav>
+
+      {isForm && 
+      <form className="enquiry-container">
+        <p className="close-p"><RiCloseLargeLine onClick={closeForm} className="close-icon"/></p>
+        <div className="fields-container"> 
+          <h1>Enquiry Form</h1>
+          <input type="text" placeholder="Enter your name"/>
+          <input type="email" placeholder="Enter your email"/>
+          <input type="number" placeholder="phone number"/>
+          <textarea placeholder="Enquiry notes" name="" id=""></textarea>
+        </div>
+        <div className="submit-container">
+          <button className="submit-btn">Submit</button>
+        </div>
+      </form>
+      }
+      
       <div id="mobile-nav" className="mobile-nav-container mobile-view">
-        <NavCard />
+        <NavCard setIsCloseIc = {setIsCloseIc} isCloseIc = {isCloseIc}/>
       </div>
       <Element name="home">
         <Home

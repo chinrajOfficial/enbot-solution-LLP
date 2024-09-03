@@ -7,13 +7,6 @@ import { FaFacebookF, FaLinkedinIn } from "react-icons/fa6";
 import { FaTwitter } from "react-icons/fa";
 import { Link as ScrollLink, Element } from "react-scroll";
 const Footer = () => {
-    const [hide, setHide] = useState(false)
-    const changeToDarkTheme = () => {
-        setHide(!hide)
-    }
-    const changeToLightTheme = () => {
-        setHide(!hide)
-    }
     const SCROLL_DURATION = 1000;
   return (
     <div>
@@ -29,7 +22,6 @@ const Footer = () => {
                 <div className='footer-second-child'>
                     <div className='footer-first-container'>
                         <h2 className=''>Quick Links</h2>
-                        {/* <a  href="">Home</a> */}
                         <ScrollLink className="footer-menus" to="home" spy={true} smooth={true} duration={SCROLL_DURATION}>Home</ScrollLink>
                         <ScrollLink className="footer-menus" to="services" spy={true} smooth={true} duration={200}>Services</ScrollLink>
                         <ScrollLink className="footer-menus" to="about" spy={true} smooth={true} duration={400}>About Us</ScrollLink>

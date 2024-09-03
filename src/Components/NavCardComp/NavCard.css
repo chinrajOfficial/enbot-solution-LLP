@@ -72,7 +72,14 @@
     background: linear-gradient(200deg, var(--firstgradientColor), var(--secondgradientColor));
 }
 @media(max-width: 1200px){
-    
+    .NavItem{
+        gap: 35px;
+    }
+    .NavList{
+        justify-content: center;
+        align-items: start;
+        text-align: start;
+    }
 }
 @media(max-width: 600px){
     .NavMenuIcon{

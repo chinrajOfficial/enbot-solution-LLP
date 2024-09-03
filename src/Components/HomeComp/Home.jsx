@@ -4,7 +4,6 @@ import Shape1 from "../../Assets/Shape1.png";
 import Shape2 from "../../Assets/Shape2.svg";
 import Shape3 from "../../Assets/Shape3.svg";
 import HomeImg from "../../Assets/HomePageImg.png";
-import video from "../../Assets/videoplayback.mp4";
 const Home = (props) => {
   return (
     <div>
