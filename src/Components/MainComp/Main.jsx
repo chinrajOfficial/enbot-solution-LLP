@@ -75,11 +75,12 @@ const Main = () => {
     document.documentElement.style.setProperty('--footerAngerTextColor', '#9596AC');
     document.documentElement.style.setProperty('--footerHeaderTextColor', '#9596AC');
     document.documentElement.style.setProperty('--footerAngerHoverTextColor', '#FFFFFF');
-    document.documentElement.style.setProperty('--footerIconsColor', '#FFFFFF');
+    document.documentElement.style.setProperty('--footerIconsColor', '#9596AC');
     document.documentElement.style.setProperty('--footerIconsHoverColor', '#36E0FF');
-    document.documentElement.style.setProperty('--footerIconsHoverColor', '#FFFFFF');
     document.documentElement.style.setProperty('--footerMailColor', '#FFFFFF');
     document.documentElement.style.setProperty('--menuIconColor', '#FFFFFF');
+    document.documentElement.style.setProperty('--socialMediaIconBgColor', '#17182da7');
+    document.documentElement.style.setProperty('--socialMediaIconBorderColor', '#36E0FF');
     
     setHide(!hide)
     setIsDarkMode(true);
@@ -117,12 +118,14 @@ const Main = () => {
     document.documentElement.style.setProperty('--footerBorderColor', '#000000');
     document.documentElement.style.setProperty('--footerAngerTextColor', '#3d3f4a');
     document.documentElement.style.setProperty('--footerHeaderTextColor', '#3F3E3E');
-    document.documentElement.style.setProperty('--footerAngerHoverTextColor', '#36E0FF');
+    document.documentElement.style.setProperty('--footerAngerHoverTextColor', '#8650F6');
     document.documentElement.style.setProperty('--footerIconsColor', '#3d3f4a');
-    document.documentElement.style.setProperty('--footerIconsHoverColor', '#36E0FF');
+    document.documentElement.style.setProperty('--footerIconsHoverColor', '#0F0715');
     document.documentElement.style.setProperty('--footerBtnColor', '#3d3f4a');
     document.documentElement.style.setProperty('--footerMailColor', '#0F0715');
     document.documentElement.style.setProperty('--menuIconColor', '#0F0715');
+    document.documentElement.style.setProperty('--socialMediaIconBgColor', '#F5F5F5');
+    document.documentElement.style.setProperty('--socialMediaIconBorderColor', '#0F0715');
 
     setHide(!hide)
     setIsDarkMode(false);

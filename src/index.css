@@ -54,6 +54,7 @@ code {
 
   --productivityBgColor: #17182d62;
   --productivityHeaderColor: #c9c9d7f1;
+  /* --productivityHeaderColor: #ebebf6e2; */
 
   --tableBgColor: #17182d62;
   --tableTextColor: #FFFFFF;
@@ -64,12 +65,11 @@ code {
   --footerAngerHoverTextColor: #FFFFFF;
   --footerHeaderTextColor: #9596AC;
   --footerBorderColor: #bdbfeb62;
-  --footerIconsColor: #FFFFFF;
+  --footerIconsColor: #9596AC;
   --footerIconsHoverColor: #36E0FF;
   --footerBtnColor: #FFFFFF;
   --footerMailColor: #FFFFFF;
   --menuIconColor: #FFFFFF;
-  
-  /* --footerBorderColor: #add0ed62; */
-
+  --socialMediaIconBgColor: #17182da7;
+  --socialMediaIconBorderColor: #36E0FF;
 }
