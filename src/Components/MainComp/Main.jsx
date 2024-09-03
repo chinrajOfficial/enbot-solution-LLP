@@ -38,160 +38,317 @@ import { SiPlatformio } from "react-icons/si";
 import { FiSun } from "react-icons/fi";
 import { GrClose } from "react-icons/gr";
 import { RiCloseLargeLine } from "react-icons/ri";
-import Modal from 'react-modal';
+import Modal from "react-modal";
 import { TbBackground } from "react-icons/tb";
 const SCROLL_DURATION = 1000;
 
 const Main = () => {
   const customStyles = {
     content: {
-      width: '100%',
+      width: "100%",
       height: "100vh",
-      top: '50%',
-      left: '50%',
-      right: 'auto',
-      bottom: 'auto',
-      marginRight: '-50%',
-      transform: 'translate(-50%, -50%)',
-      overflow: 'hidden',
-      background: 'none',
-      border: 'none'
+      top: "50%",
+      left: "50%",
+      right: "auto",
+      bottom: "auto",
+      marginRight: "-50%",
+      transform: "translate(-50%, -50%)",
+      overflow: "hidden",
+      background: "none",
+      border: "none",
     },
   };
-  
 
-  const [hide, setHide] = useState(false)
+  const [hide, setHide] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(true);
   const [isCloseIc, setIsCloseIc] = useState(false);
   const [isForm, setisForm] = useState(false);
-  const viewForm = () => {setisForm(true)}
-  const closeForm = () => {setisForm(false)}
+  const viewForm = () => {
+    setisForm(true);
+  };
+  const closeForm = () => {
+    setisForm(false);
+  };
   const changeToClose = () => {
     setIsCloseIc(!isCloseIc);
-    var navBar = document.getElementById('mobile-nav')
-    navBar.style.right = '0';
-    navBar.style.transition = '.7s';
-    navBar.style.position = 'fixed';
-    navBar.style.zIndex = '20';
-  }
+    var navBar = document.getElementById("mobile-nav");
+    navBar.style.right = "0";
+    navBar.style.transition = ".7s";
+    navBar.style.position = "fixed";
+    navBar.style.zIndex = "20";
+  };
   const changeToMenu = () => {
     setIsCloseIc(!isCloseIc);
-    var navBar = document.getElementById('mobile-nav')
-    navBar.style.right = '-100%';
-    navBar.style.transition = '.5s ease-in';
-  }
+    var navBar = document.getElementById("mobile-nav");
+    navBar.style.right = "-100%";
+    navBar.style.transition = ".5s ease-in";
+  };
   const changeToDarkTheme = () => {
-    document.documentElement.style.setProperty('--navStickyBgcolor', '#0F0715');
-    document.documentElement.style.setProperty('--navFirstMenuColor', '#36E0FF');
-    document.documentElement.style.setProperty('--navSecondMenuColor', '#8650F6');
-    document.documentElement.style.setProperty('--menuIconColor', '#FFFFFF');
-    document.documentElement.style.setProperty('--primaryTextColor', '#3F3E3E');
-    document.documentElement.style.setProperty('--secondaryTextColor', '#9596AC');
-    document.documentElement.style.setProperty('--backgroundColor', '#0F0715');
-    document.documentElement.style.setProperty('--homeFirstHeadingColor', '#c9c9d7f1');
-    document.documentElement.style.setProperty('--homeSecondHeadingColor', '#c9c9d7f1');
-    document.documentElement.style.setProperty('--firstgradientColor', '#36E0FF');
-    document.documentElement.style.setProperty('--secondgradientColor', '#8650F6');
-    document.documentElement.style.setProperty('--whiteColor', '#FFFFFF');
-    document.documentElement.style.setProperty('--activeMenuColor', '#2ECAFF');
-    document.documentElement.style.setProperty('--serviceCardBgColor', 'rgb(9, 1, 29)');
-    document.documentElement.style.setProperty('--serviceCardSecondBgColor', '#0F0715');
-    document.documentElement.style.setProperty('--serviceImgFirstBgColor', '#36E0FF');
-    document.documentElement.style.setProperty('--serviceImgSecondBgColor', '#8650F6');
-    document.documentElement.style.setProperty('--serviceCardBorderColor', 'transparent');
-    document.documentElement.style.setProperty('--serviceCardBorderHoverColor', '#FFFFFF');
-    document.documentElement.style.setProperty('--productCardFirstBgColor', '#0F0715');
-    document.documentElement.style.setProperty('--productCardSecondBgColor', '#0F0715');
-    document.documentElement.style.setProperty('--productivityBgColor', '#17182d62');
-    document.documentElement.style.setProperty('--productivityHeaderColor', '#c9c9d7f1');
+    document.documentElement.style.setProperty("--navStickyBgcolor", "#0F0715");
+    document.documentElement.style.setProperty(
+      "--navFirstMenuColor",
+      "#36E0FF"
+    );
+    document.documentElement.style.setProperty(
+      "--navSecondMenuColor",
+      "#8650F6"
+    );
+    document.documentElement.style.setProperty("--menuIconColor", "#FFFFFF");
+    document.documentElement.style.setProperty("--primaryTextColor", "#3F3E3E");
+    document.documentElement.style.setProperty(
+      "--secondaryTextColor",
+      "#9596AC"
+    );
+    document.documentElement.style.setProperty("--backgroundColor", "#0F0715");
+    document.documentElement.style.setProperty(
+      "--homeFirstHeadingColor",
+      "#c9c9d7f1"
+    );
+    document.documentElement.style.setProperty(
+      "--homeSecondHeadingColor",
+      "#c9c9d7f1"
+    );
+    document.documentElement.style.setProperty(
+      "--firstgradientColor",
+      "#36E0FF"
+    );
+    document.documentElement.style.setProperty(
+      "--secondgradientColor",
+      "#8650F6"
+    );
+    document.documentElement.style.setProperty("--whiteColor", "#FFFFFF");
+    document.documentElement.style.setProperty("--activeMenuColor", "#2ECAFF");
+    document.documentElement.style.setProperty(
+      "--serviceCardBgColor",
+      "rgb(9, 1, 29)"
+    );
+    document.documentElement.style.setProperty(
+      "--serviceCardSecondBgColor",
+      "#0F0715"
+    );
+    document.documentElement.style.setProperty(
+      "--serviceImgFirstBgColor",
+      "#36E0FF"
+    );
+    document.documentElement.style.setProperty(
+      "--serviceImgSecondBgColor",
+      "#8650F6"
+    );
+    document.documentElement.style.setProperty(
+      "--serviceCardBorderColor",
+      "transparent"
+    );
+    document.documentElement.style.setProperty(
+      "--serviceCardBorderHoverColor",
+      "#FFFFFF"
+    );
+    document.documentElement.style.setProperty(
+      "--productCardFirstBgColor",
+      "#0F0715"
+    );
+    document.documentElement.style.setProperty(
+      "--productCardSecondBgColor",
+      "#0F0715"
+    );
+    document.documentElement.style.setProperty(
+      "--productivityBgColor",
+      "#17182d62"
+    );
+    document.documentElement.style.setProperty(
+      "--productivityHeaderColor",
+      "#c9c9d7f1"
+    );
 
-    document.documentElement.style.setProperty('--tableBgColor', '#17182d62');
-    document.documentElement.style.setProperty('--tableBorderColor', '#2D2E41');
-    document.documentElement.style.setProperty('--tableTextColor', '#FFFFFF');
+    document.documentElement.style.setProperty("--tableBgColor", "#17182d62");
+    document.documentElement.style.setProperty("--tableBorderColor", "#2D2E41");
+    document.documentElement.style.setProperty("--tableTextColor", "#FFFFFF");
 
-    document.documentElement.style.setProperty('--footerBgColor', '#17182d62');
-    document.documentElement.style.setProperty('--footerBorderColor', '#bdbfeb62');
-    document.documentElement.style.setProperty('--footerAngerTextColor', '#9596AC');
-    document.documentElement.style.setProperty('--footerHeaderTextColor', '#9596AC');
-    document.documentElement.style.setProperty('--footerAngerHoverTextColor', '#FFFFFF');
-    document.documentElement.style.setProperty('--footerIconsColor', '#9596AC');
-    document.documentElement.style.setProperty('--footerIconsHoverColor', '#36E0FF');
-    document.documentElement.style.setProperty('--footerMailColor', '#FFFFFF');
-    document.documentElement.style.setProperty('--menuIconColor', '#FFFFFF');
-    document.documentElement.style.setProperty('--socialMediaIconBgColor', '#17182da7');
-    document.documentElement.style.setProperty('--socialMediaIconBorderColor', '#36E0FF');
-    
-    document.documentElement.style.setProperty('--mobileNavBgColor', '#0F0715');
-    document.documentElement.style.setProperty('--mobileNavIconsColor', '#36E0FF');
-    document.documentElement.style.setProperty('--mobileNavTextColor', '#9596AC');
-    
-    setHide(!hide)
+    document.documentElement.style.setProperty("--footerBgColor", "#17182d62");
+    document.documentElement.style.setProperty(
+      "--footerBorderColor",
+      "#bdbfeb62"
+    );
+    document.documentElement.style.setProperty(
+      "--footerAngerTextColor",
+      "#9596AC"
+    );
+    document.documentElement.style.setProperty(
+      "--footerHeaderTextColor",
+      "#9596AC"
+    );
+    document.documentElement.style.setProperty(
+      "--footerAngerHoverTextColor",
+      "#FFFFFF"
+    );
+    document.documentElement.style.setProperty("--footerIconsColor", "#9596AC");
+    document.documentElement.style.setProperty(
+      "--footerIconsHoverColor",
+      "#36E0FF"
+    );
+    document.documentElement.style.setProperty("--footerMailColor", "#FFFFFF");
+    document.documentElement.style.setProperty("--menuIconColor", "#FFFFFF");
+    document.documentElement.style.setProperty(
+      "--socialMediaIconBgColor",
+      "#17182da7"
+    );
+    document.documentElement.style.setProperty(
+      "--socialMediaIconBorderColor",
+      "#36E0FF"
+    );
+
+    document.documentElement.style.setProperty("--mobileNavBgColor", "#0F0715");
+    document.documentElement.style.setProperty(
+      "--mobileNavIconsColor",
+      "#36E0FF"
+    );
+    document.documentElement.style.setProperty(
+      "--mobileNavTextColor",
+      "#9596AC"
+    );
+
+    setHide(!hide);
     setIsDarkMode(true);
-  }
+  };
 
   const changeToLightTheme = () => {
-    document.documentElement.style.setProperty('--backgroundColor', '#F5F5F5');
-    document.documentElement.style.setProperty('--secondaryTextColor', '#3d3f4a');
-    document.documentElement.style.setProperty('--navStickyBgcolor', '#F5F5F5');
-    document.documentElement.style.setProperty('--navFirstMenuColor', '#7078F9');
-    document.documentElement.style.setProperty('--navSecondMenuColor', '#7E5EF7');
-    document.documentElement.style.setProperty('--activeMenuColor', '#7078F9');
-    document.documentElement.style.setProperty('--menuIconColor', '#000000');
-    document.documentElement.style.setProperty('--homeFirstHeadingColor', '#36E0FF');
-    document.documentElement.style.setProperty('--homeSecondHeadingColor', '#8650F6');
+    document.documentElement.style.setProperty("--backgroundColor", "#F5F5F5");
+    document.documentElement.style.setProperty(
+      "--secondaryTextColor",
+      "#3d3f4a"
+    );
+    document.documentElement.style.setProperty("--navStickyBgcolor", "#F5F5F5");
+    document.documentElement.style.setProperty(
+      "--navFirstMenuColor",
+      "#7078F9"
+    );
+    document.documentElement.style.setProperty(
+      "--navSecondMenuColor",
+      "#7E5EF7"
+    );
+    document.documentElement.style.setProperty("--activeMenuColor", "#7078F9");
+    document.documentElement.style.setProperty("--menuIconColor", "#000000");
+    document.documentElement.style.setProperty(
+      "--homeFirstHeadingColor",
+      "#36E0FF"
+    );
+    document.documentElement.style.setProperty(
+      "--homeSecondHeadingColor",
+      "#8650F6"
+    );
 
-    document.documentElement.style.setProperty('--serviceCardBgColor', '#ffffff');
-    document.documentElement.style.setProperty('--serviceCardSecondBgColor', 'rgb(171, 224, 240, 0.932)');
-    document.documentElement.style.setProperty('--serviceImgFirstBgColor', '#ffffff');
-    document.documentElement.style.setProperty('--serviceImgSecondBgColor', '#a5edf4');
-    document.documentElement.style.setProperty('--serviceCardBorderColor', '#ffffff');
-    document.documentElement.style.setProperty('--serviceCardBorderHoverColor', '#0F0715');
+    document.documentElement.style.setProperty(
+      "--serviceCardBgColor",
+      "#ffffff"
+    );
+    document.documentElement.style.setProperty(
+      "--serviceCardSecondBgColor",
+      "rgb(171, 224, 240, 0.932)"
+    );
+    document.documentElement.style.setProperty(
+      "--serviceImgFirstBgColor",
+      "#ffffff"
+    );
+    document.documentElement.style.setProperty(
+      "--serviceImgSecondBgColor",
+      "#a5edf4"
+    );
+    document.documentElement.style.setProperty(
+      "--serviceCardBorderColor",
+      "#ffffff"
+    );
+    document.documentElement.style.setProperty(
+      "--serviceCardBorderHoverColor",
+      "#0F0715"
+    );
 
-    document.documentElement.style.setProperty('--productCardFirstBgColor', '#f5f5f5');
-    document.documentElement.style.setProperty('--productCardSecondBgColor', '#f5f5f5');
+    document.documentElement.style.setProperty(
+      "--productCardFirstBgColor",
+      "#f5f5f5"
+    );
+    document.documentElement.style.setProperty(
+      "--productCardSecondBgColor",
+      "#f5f5f5"
+    );
 
-    document.documentElement.style.setProperty('--productivityBgColor', '#36E0FF');
-    document.documentElement.style.setProperty('--productivityHeaderColor', '#3d3f4a');
+    document.documentElement.style.setProperty(
+      "--productivityBgColor",
+      "#36E0FF"
+    );
+    document.documentElement.style.setProperty(
+      "--productivityHeaderColor",
+      "#3d3f4a"
+    );
 
-    document.documentElement.style.setProperty('--tableBgColor', '#F5F5F5');
-    document.documentElement.style.setProperty('--tableBorderColor', '#2D2E41');
-    document.documentElement.style.setProperty('--tableTextColor', '#3F3E3E');
+    document.documentElement.style.setProperty("--tableBgColor", "#F5F5F5");
+    document.documentElement.style.setProperty("--tableBorderColor", "#2D2E41");
+    document.documentElement.style.setProperty("--tableTextColor", "#3F3E3E");
 
-    document.documentElement.style.setProperty('--footerBgColor', '#F5F5F5');
-    document.documentElement.style.setProperty('--footerBorderColor', '#000000');
-    document.documentElement.style.setProperty('--footerAngerTextColor', '#3d3f4a');
-    document.documentElement.style.setProperty('--footerHeaderTextColor', '#3F3E3E');
-    document.documentElement.style.setProperty('--footerAngerHoverTextColor', '#8650F6');
-    document.documentElement.style.setProperty('--footerIconsColor', '#3d3f4a');
-    document.documentElement.style.setProperty('--footerIconsHoverColor', '#0F0715');
-    document.documentElement.style.setProperty('--footerBtnColor', '#3d3f4a');
-    document.documentElement.style.setProperty('--footerMailColor', '#0F0715');
-    document.documentElement.style.setProperty('--menuIconColor', '#0F0715');
-    document.documentElement.style.setProperty('--socialMediaIconBgColor', '#F5F5F5');
-    document.documentElement.style.setProperty('--socialMediaIconBorderColor', '#0F0715');
+    document.documentElement.style.setProperty("--footerBgColor", "#F5F5F5");
+    document.documentElement.style.setProperty(
+      "--footerBorderColor",
+      "#000000"
+    );
+    document.documentElement.style.setProperty(
+      "--footerAngerTextColor",
+      "#3d3f4a"
+    );
+    document.documentElement.style.setProperty(
+      "--footerHeaderTextColor",
+      "#3F3E3E"
+    );
+    document.documentElement.style.setProperty(
+      "--footerAngerHoverTextColor",
+      "#8650F6"
+    );
+    document.documentElement.style.setProperty("--footerIconsColor", "#3d3f4a");
+    document.documentElement.style.setProperty(
+      "--footerIconsHoverColor",
+      "#0F0715"
+    );
+    document.documentElement.style.setProperty("--footerBtnColor", "#3d3f4a");
+    document.documentElement.style.setProperty("--footerMailColor", "#0F0715");
+    document.documentElement.style.setProperty("--menuIconColor", "#0F0715");
+    document.documentElement.style.setProperty(
+      "--socialMediaIconBgColor",
+      "#F5F5F5"
+    );
+    document.documentElement.style.setProperty(
+      "--socialMediaIconBorderColor",
+      "#0F0715"
+    );
 
-    document.documentElement.style.setProperty('--mobileNavBgColor', '#F5F5F5');
-    document.documentElement.style.setProperty('--mobileNavIconsColor', '#8650F6');
-    document.documentElement.style.setProperty('--mobileNavTextColor', '#0F0715');
+    document.documentElement.style.setProperty("--mobileNavBgColor", "#F5F5F5");
+    document.documentElement.style.setProperty(
+      "--mobileNavIconsColor",
+      "#8650F6"
+    );
+    document.documentElement.style.setProperty(
+      "--mobileNavTextColor",
+      "#0F0715"
+    );
 
-    setHide(!hide)
+    setHide(!hide);
     setIsDarkMode(false);
   };
   const handleScroll = () => {
     const navbar = document.getElementById("navbar");
     if (window.pageYOffset > navbar.offsetTop) {
-        navbar.classList.add("sticky");
+      navbar.classList.add("sticky");
     } else {
-        navbar.classList.remove("sticky");
+      navbar.classList.remove("sticky");
     }
-};
+  };
 
-window.addEventListener("scroll", handleScroll);
+  window.addEventListener("scroll", handleScroll);
   return (
     <div className="main-container">
       {/* <NavCard /> */}
       <nav id="navbar" className="navbar">
-        <img className="nav-logo" src={isDarkMode ? DarkLogo : LightLogo} alt="Logo" />
+        <img
+          className="nav-logo"
+          src={isDarkMode ? DarkLogo : LightLogo}
+          alt="Logo"
+        />
         <ul className="nav-menus">
           <li>
             <ScrollLink
@@ -231,40 +388,51 @@ window.addEventListener("scroll", handleScroll);
           </li>
         </ul>
         <div className="NavIcons">
-          <button onClick={viewForm} className="mode-btn"><SiPlatformio /> Enquiry</button>
+          <button onClick={viewForm} className="mode-btn">
+            <SiPlatformio /> Enquiry
+          </button>
           <div>
-           {!hide &&  <MdDarkMode onClick={changeToLightTheme} className="light-mode"/>}
-            {hide && <FiSun onClick={changeToDarkTheme} className="dark-mode"/>}
+            {!hide && (
+              <MdDarkMode onClick={changeToLightTheme} className="light-mode" />
+            )}
+            {hide && (
+              <FiSun onClick={changeToDarkTheme} className="dark-mode" />
+            )}
           </div>
 
-          {!isCloseIc && <TfiMenuAlt onClick={changeToClose} className="MenuIcon"/>}
-          {isCloseIc && <GrClose onClick={changeToMenu} className="MenuIcon"/>}
+          {!isCloseIc && (
+            <TfiMenuAlt onClick={changeToClose} className="MenuIcon" />
+          )}
+          {isCloseIc && <GrClose onClick={changeToMenu} className="MenuIcon" />}
+        </div>
+
+        <div id="mobile-nav" className="mobile-nav-container mobile-view">
+          <NavCard setIsCloseIc={setIsCloseIc} isCloseIc={isCloseIc} />
         </div>
       </nav>
-       <Modal
+      <Modal
         isOpen={isForm}
         onRequestClose={closeForm}
         style={customStyles}
         contentLabel="Example Modal"
       >
         <form className="enquiry-container">
-        <p className="close-p"><RiCloseLargeLine onClick={closeForm} className="close-icon"/></p>
-        <div className="fields-container"> 
-          <h1>Enquiry Form</h1>
-          <input type="text" placeholder="Enter your Full Name"/>
-          <input type="email" placeholder="Enter your Email"/>
-          <input type="number" placeholder="Phone Number"/>
-          <textarea placeholder="Enquiry notes" name="" id=""></textarea>
-        </div>
-        <div className="submit-container">
-          <button className="submit-btn">Submit</button>
-        </div>
-      </form>
+          <p className="close-p">
+            <RiCloseLargeLine onClick={closeForm} className="close-icon" />
+          </p>
+          <div className="fields-container">
+            <h1>Enquiry Form</h1>
+            <input type="text" placeholder="Enter your Full Name" />
+            <input type="email" placeholder="Enter your Email" />
+            <input type="number" placeholder="Phone Number" />
+            <textarea placeholder="Enquiry notes" name="" id=""></textarea>
+          </div>
+          <div className="submit-container">
+            <button className="submit-btn">Submit</button>
+          </div>
+        </form>
       </Modal>
 
-      <div id="mobile-nav" className="mobile-nav-container mobile-view">
-        <NavCard setIsCloseIc = {setIsCloseIc} isCloseIc = {isCloseIc}/>
-      </div>
       <Element name="home">
         <Home
           title="Unleash the power of data with "
@@ -439,40 +607,38 @@ window.addEventListener("scroll", handleScroll);
 
         <div className="faqs-table-container">
           <FaqComp
-            id='1'
+            id="1"
             data="What is data crawlink, and its businuss benefits?"
             des="Data crawling, also known as web scraping, involves extracting data from websites to gather valuable insights for businesses. It can benefit your business by providing access to market trends, competitor analysis, pricing information, and customer sentiment, enabling informed decision-making and strategic planning."
           />
 
           <FaqComp
-          id='2'
+            id="2"
             data="How does ENBOT ensure data accuracy"
             des="ENBOT utilizes advanced bot mechanisms and algorithms to ensure the accuracy and reliability of the data we extract. Our bots are intelligently designed to navigate websites, mimic human behavior, and extract data with precision, minimizing errors and maintaining data integrity."
           />
 
           <FaqComp
-          id='3'
+            id="3"
             data="Is the data extraction process legal and ethical?"
             des="ENBOT adheres to all relevant laws and regulations governing data extraction, including copyright laws and website terms of service. Our bot mechanism operates within ethical boundaries, respecting the rights of website owners and prioritizing responsible data collection practices."
           />
 
           <FaqComp
-            id ='4'
+            id="4"
             data="Can ENBOT handle large-scale data extraction projects"
             des="Yes, our bot mechanism is capable of handling large-scale data extraction projects efficiently. Whether you need to crawl thousands of product listings or monitor multiple e-commerce websites simultaneously, ENBOT's bots can scale to meet your needs while maintaining high performance and reliability."
           />
 
           <FaqComp
-            id ='5'
+            id="5"
             data="How often is data updated using your bot mechanism"
             des="Yes, our bot mechanism is capable of handling large-scale data extraction projects efficiently. Whether you need to crawl thousands of product listings or monitor multiple e-commerce websites simultaneously, ENBOT's bots can scale to meet your needs while maintaining high performance and reliability."
           />
         </div>
-
       </section>
       <Footer />
     </div>
-    
   );
 };
 

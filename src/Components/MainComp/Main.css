@@ -9,6 +9,7 @@
     font-family: var(--segoeFont);
     position: relative;
     top: 0;
+    overflow: hidden;
     transition: background-color 0.3s, box-shadow 0.1s; 
 }
 .sticky {
@@ -400,8 +401,6 @@ input[type="number"]::-webkit-inner-spin-button {
     cursor: pointer;
     transition: all 0.3s ease;
     background-color: #051f29;
-    /* background: rgb(108,209,226);
-    background: linear-gradient(120deg, rgba(118,23,206,1) 0%,  rgba(69,162,252,1) 100%, rgba(118,23,206,1) 20%); */
 }
 @media(max-width:1200px){
     .navbar{
