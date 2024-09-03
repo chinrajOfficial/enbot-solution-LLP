@@ -7,13 +7,13 @@ import { FaFacebookF, FaLinkedinIn } from "react-icons/fa6";
 import { FaTwitter } from "react-icons/fa";
 import { Link as ScrollLink, Element } from "react-scroll";
 const Footer = () => {
+
     const SCROLL_DURATION = 1000;
   return (
     <div>
         <div className='footer-container'>
             <div className='footer-datas-container'>
                 <div className='footer-first-container'>
-                    {/* <img src={DarkLogo} alt="" /> */}
                     <img src={LightLogo} alt="" />
                     <p>Unlock e-commerce intricacies with our advanced crawling solutions for a competitive boost.</p>
                     <p className='contact'>contact</p>

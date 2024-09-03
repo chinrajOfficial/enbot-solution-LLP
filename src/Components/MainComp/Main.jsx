@@ -38,17 +38,34 @@ import { SiPlatformio } from "react-icons/si";
 import { FiSun } from "react-icons/fi";
 import { GrClose } from "react-icons/gr";
 import { RiCloseLargeLine } from "react-icons/ri";
+import Modal from 'react-modal';
+import { TbBackground } from "react-icons/tb";
 const SCROLL_DURATION = 1000;
 
 const Main = () => {
+  const customStyles = {
+    content: {
+      width: '100%',
+      height: "100vh",
+      top: '50%',
+      left: '50%',
+      right: 'auto',
+      bottom: 'auto',
+      marginRight: '-50%',
+      transform: 'translate(-50%, -50%)',
+      overflow: 'hidden',
+      background: 'none',
+      border: 'none'
+    },
+  };
+  
+
   const [hide, setHide] = useState(false)
   const [isDarkMode, setIsDarkMode] = useState(true);
   const [isCloseIc, setIsCloseIc] = useState(false);
   const [isForm, setisForm] = useState(false);
-
   const viewForm = () => {setisForm(true)}
   const closeForm = () => {setisForm(false)}
-
   const changeToClose = () => {
     setIsCloseIc(!isCloseIc);
     var navBar = document.getElementById('mobile-nav')
@@ -57,7 +74,6 @@ const Main = () => {
     navBar.style.position = 'fixed';
     navBar.style.zIndex = '20';
   }
-  
   const changeToMenu = () => {
     setIsCloseIc(!isCloseIc);
     var navBar = document.getElementById('mobile-nav')
@@ -225,9 +241,13 @@ window.addEventListener("scroll", handleScroll);
           {isCloseIc && <GrClose onClick={changeToMenu} className="MenuIcon"/>}
         </div>
       </nav>
-
-      {isForm && 
-      <form className="enquiry-container">
+       <Modal
+        isOpen={isForm}
+        onRequestClose={closeForm}
+        style={customStyles}
+        contentLabel="Example Modal"
+      >
+        <form className="enquiry-container">
         <p className="close-p"><RiCloseLargeLine onClick={closeForm} className="close-icon"/></p>
         <div className="fields-container"> 
           <h1>Enquiry Form</h1>
@@ -240,8 +260,8 @@ window.addEventListener("scroll", handleScroll);
           <button className="submit-btn">Submit</button>
         </div>
       </form>
-      }
-      
+      </Modal>
+
       <div id="mobile-nav" className="mobile-nav-container mobile-view">
         <NavCard setIsCloseIc = {setIsCloseIc} isCloseIc = {isCloseIc}/>
       </div>
