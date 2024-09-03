@@ -1,11 +1,10 @@
 .NavCard{
-    width: 20%;
-    height: 100vh;
-    padding: 20px 30px 20px 30px;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border-right: 2px solid #8650F6;
+    padding: 20px 0;
 }
 .LogoImg{
     width: 75%; 
@@ -17,18 +16,21 @@
     border-radius: 5px;
 }
 .NavMenuIcon{
-    color: #8650F6;
+    color: var(--mobileNavIconsColor);
     font-size: 16px;
     font-weight: 600;
 }
 .NavItem:hover{
-    color: var(--logoTextColor);
-    background-color: var(--navItemBgColor);
+    cursor: pointer;
+    color: var(--whiteColor);
+    background: linear-gradient(200deg, var(--firstgradientColor), var(--secondgradientColor));
 }
 .NavItem:hover .NavMenu{
     color: var(--logoTextColor);
     transition: 0.5s;
     transform: translate3d(10px, 0, 0);
+    width: 100%;
+    height: 100%;
 }
 .NavItem:hover .NavMenuIcon{
     color: var(--logoTextColor);
@@ -37,7 +39,7 @@
 }
 .NavMenu{
     text-decoration: none;
-    color: var(--primaryTextColor);
+    color: var(--mobileNavTextColor);
     font-weight: 500;
 }
 .NavList{
@@ -57,13 +59,26 @@
 .NavButton{
     width: 100%;
     height: 40px;
-    border-radius: 5px;
-    font-size: 16px;
-    font-family: var(--segoeFont);
-    font-weight: 500;
-    border: 1px solid rgb(99, 133, 245);
-    /* border: none; */
-    background-color: #8650F6;
+    letter-spacing: 1px;
     color: var(--whiteColor);
+    font-size: 14px;
+    border-radius: 10px;
+    font-family: var(--popinFont);
+    background: linear-gradient(20deg, var(--firstgradientColor), var(--secondgradientColor));
+    border: none;
+    cursor: pointer;
 }
-
+.NavButton:hover{
+    background: linear-gradient(200deg, var(--firstgradientColor), var(--secondgradientColor));
+}
+@media(max-width: 1200px){
+    
+}
+@media(max-width: 600px){
+    .NavMenuIcon{
+        font-size: 20px;
+    }
+    .NavItem{
+        gap: 15px;
+    }
+}

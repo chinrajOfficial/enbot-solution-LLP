@@ -36,11 +36,31 @@ import { IoMenu } from "react-icons/io5";
 import { TfiMenuAlt } from "react-icons/tfi";
 import { SiPlatformio } from "react-icons/si";
 import { FiSun } from "react-icons/fi";
+import { GrClose } from "react-icons/gr";
 const SCROLL_DURATION = 1000;
 
 const Main = () => {
   const [hide, setHide] = useState(false)
   const [isDarkMode, setIsDarkMode] = useState(true);
+
+  const [isCloseIc, setIsCloseIc] = useState(false);
+
+  const changeToClose = () => {
+    setIsCloseIc(!isCloseIc);
+    var navBar = document.getElementById('mobile-nav')
+    navBar.style.right = '0';
+    navBar.style.transition = '.7s';
+    navBar.style.position = 'fixed';
+    navBar.style.top = '100px';
+    navBar.style.zIndex = '20';
+  }
+  
+  const changeToMenu = () => {
+    setIsCloseIc(!isCloseIc);
+    var navBar = document.getElementById('mobile-nav')
+    navBar.style.right = '-100%';
+    navBar.style.transition = '.5s ease-in';
+  }
   const changeToDarkTheme = () => {
     document.documentElement.style.setProperty('--navStickyBgcolor', '#0F0715');
     document.documentElement.style.setProperty('--navFirstMenuColor', '#36E0FF');
@@ -81,6 +101,10 @@ const Main = () => {
     document.documentElement.style.setProperty('--menuIconColor', '#FFFFFF');
     document.documentElement.style.setProperty('--socialMediaIconBgColor', '#17182da7');
     document.documentElement.style.setProperty('--socialMediaIconBorderColor', '#36E0FF');
+    
+    document.documentElement.style.setProperty('--mobileNavBgColor', '#0F0715');
+    document.documentElement.style.setProperty('--mobileNavIconsColor', '#36E0FF');
+    document.documentElement.style.setProperty('--mobileNavTextColor', '#9596AC');
     
     setHide(!hide)
     setIsDarkMode(true);
@@ -127,6 +151,10 @@ const Main = () => {
     document.documentElement.style.setProperty('--socialMediaIconBgColor', '#F5F5F5');
     document.documentElement.style.setProperty('--socialMediaIconBorderColor', '#0F0715');
 
+    document.documentElement.style.setProperty('--mobileNavBgColor', '#F5F5F5');
+    document.documentElement.style.setProperty('--mobileNavIconsColor', '#8650F6');
+    document.documentElement.style.setProperty('--mobileNavTextColor', '#0F0715');
+
     setHide(!hide)
     setIsDarkMode(false);
   };
@@ -140,7 +168,6 @@ const Main = () => {
 };
 
 window.addEventListener("scroll", handleScroll);
-
   return (
     <div className="main-container">
       {/* <NavCard /> */}
@@ -189,12 +216,21 @@ window.addEventListener("scroll", handleScroll);
           <div>
            {!hide &&  <MdDarkMode onClick={changeToLightTheme} className="light-mode"/>}
             {hide && <FiSun onClick={changeToDarkTheme} className="dark-mode"/>}
-            
           </div>
-          <TfiMenuAlt className="MenuIcon"/>
+
+          {!isCloseIc && <TfiMenuAlt onClick={changeToClose} className="MenuIcon"/>}
+          {isCloseIc && <GrClose onClick={changeToMenu} className="MenuIcon"/>}
+
         </div>
       </nav>
-
+      <div id="mobile-nav" className="mobile-nav-container mobile-view">
+        <NavCard />
+          {/* <ScrollLink className="footer-menus" to="home" spy={true} smooth={true} duration={SCROLL_DURATION}>Home</ScrollLink>
+          <ScrollLink className="footer-menus" to="services" spy={true} smooth={true} duration={200}>Services</ScrollLink>
+          <ScrollLink className="footer-menus" to="about" spy={true} smooth={true} duration={400}>About Us</ScrollLink>
+          <ScrollLink className="footer-menus" to="products" spy={true} smooth={true} duration={600}>Products</ScrollLink>
+          <ScrollLink className="footer-menus" to="contact" spy={true} smooth={true} duration={SCROLL_DURATION}>Contact Us</ScrollLink> */}
+      </div>
       <Element name="home">
         <Home
           title="Unleash the power of data with "

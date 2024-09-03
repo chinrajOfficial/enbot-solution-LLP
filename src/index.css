@@ -28,7 +28,6 @@ code {
   --navStickyBgcolor: #0F0715;
   --navFirstMenuColor: #36E0FF;
   --navSecondMenuColor: #85d2e9;
-  --navItemBgColor: #C7C8FC;
   --activeMenuColor: #2ECAFF;
   --menuIconColor: #ffffff;
 
@@ -39,7 +38,6 @@ code {
   --homeSecondHeadingColor: #c9c9d7f1;
   --primaryTextColor: #3F3E3E;
   --secondaryTextColor: #9596AC;
-  --logoTextColor: #8650F6;
   --whiteColor: #FFFFFF;
 
   --serviceCardBgColor: rgb(9, 1, 29);
@@ -72,4 +70,10 @@ code {
   --menuIconColor: #FFFFFF;
   --socialMediaIconBgColor: #17182da7;
   --socialMediaIconBorderColor: #36E0FF;
+
+  --mobileNavBgColor: #0F0715;
+  --mobileNavIconsColor: #36E0FF;
+  --mobileNavItemBgColor: #C7C8FC;
+  --mobileNavTextColor: #9596AC;
+
 }
