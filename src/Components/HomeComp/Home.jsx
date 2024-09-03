@@ -1,13 +1,15 @@
-import React from 'react'
-import './Home.css'
-import Shape1 from '../../Assets/Shape1.png'
-import Shape2 from '../../Assets/Shape2.svg'
-import Shape3 from '../../Assets/Shape3.svg'
-import HomeImg from '../../Assets/HomePageImg.png'
+import React from "react";
+import "./Home.css";
+import Shape1 from "../../Assets/Shape1.png";
+import Shape2 from "../../Assets/Shape2.svg";
+import Shape3 from "../../Assets/Shape3.svg";
+import HomeImg from "../../Assets/HomePageImg.png";
+import video from "../../Assets/videoplayback.mp4";
 const Home = (props) => {
   return (
     <div>
-        <section className="home-container">
+      <section className="home-container">
+       
         <div className="intro-section">
           <div className="intro-text">
             <h1>
@@ -29,7 +31,7 @@ const Home = (props) => {
         </div>
       </section>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

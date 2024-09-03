@@ -51,7 +51,6 @@ const Main = () => {
     navBar.style.right = '0';
     navBar.style.transition = '.7s';
     navBar.style.position = 'fixed';
-    navBar.style.top = '100px';
     navBar.style.zIndex = '20';
   }
   
@@ -225,11 +224,6 @@ window.addEventListener("scroll", handleScroll);
       </nav>
       <div id="mobile-nav" className="mobile-nav-container mobile-view">
         <NavCard />
-          {/* <ScrollLink className="footer-menus" to="home" spy={true} smooth={true} duration={SCROLL_DURATION}>Home</ScrollLink>
-          <ScrollLink className="footer-menus" to="services" spy={true} smooth={true} duration={200}>Services</ScrollLink>
-          <ScrollLink className="footer-menus" to="about" spy={true} smooth={true} duration={400}>About Us</ScrollLink>
-          <ScrollLink className="footer-menus" to="products" spy={true} smooth={true} duration={600}>Products</ScrollLink>
-          <ScrollLink className="footer-menus" to="contact" spy={true} smooth={true} duration={SCROLL_DURATION}>Contact Us</ScrollLink> */}
       </div>
       <Element name="home">
         <Home
