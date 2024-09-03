@@ -251,9 +251,9 @@ window.addEventListener("scroll", handleScroll);
         <p className="close-p"><RiCloseLargeLine onClick={closeForm} className="close-icon"/></p>
         <div className="fields-container"> 
           <h1>Enquiry Form</h1>
-          <input type="text" placeholder="Enter your name"/>
-          <input type="email" placeholder="Enter your email"/>
-          <input type="number" placeholder="phone number"/>
+          <input type="text" placeholder="Enter your Full Name"/>
+          <input type="email" placeholder="Enter your Email"/>
+          <input type="number" placeholder="Phone Number"/>
           <textarea placeholder="Enquiry notes" name="" id=""></textarea>
         </div>
         <div className="submit-container">
