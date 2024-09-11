@@ -53,22 +53,74 @@ const Main = () => {
       bottom: "auto",
       marginRight: "-50%",
       transform: "translate(-50%, -50%)",
-      overflow: "hidden",
       background: "none",
-      border: "none",
     },
   };
+
+  var faqData = [
+    {
+      id: "1",
+      data: "What is data crawlink, and its businuss benefits?",
+      des: "Data crawling, also known as web scraping, involves extracting data from websites to gather valuable insights for businesses. It can benefit your business by providing access to market trends, competitor analysis, pricing information, and customer sentiment, enabling informed decision-making and strategic planning.",
+    },
+    {
+      id: "2",
+      data: "How does ENBOT ensure data accuracy",
+      des: "ENBOT utilizes advanced bot mechanisms and algorithms to ensure the accuracy and reliability of the data we extract. Our bots are intelligently designed to navigate websites, mimic human behavior, and extract data with precision, minimizing errors and maintaining data integrity.",
+    },
+    {
+      id: "3",
+      data: "Is the data extraction process legal and ethical?",
+      des: "ENBOT adheres to all relevant laws and regulations governing data extraction, including copyright laws and website terms of service. Our bot mechanism operates within ethical boundaries, respecting the rights of website owners and prioritizing responsible data collection practices.",
+    },
+    {
+      id: "4",
+      data: "Can ENBOT handle large-scale data extraction projects",
+      des: "Yes, our bot mechanism is capable of handling large-scale data extraction projects efficiently. Whether you need to crawl thousands of product listings or monitor multiple e-commerce websites simultaneously, ENBOT's bots can scale to meet your needs while maintaining high performance and reliability.",
+    },
+    {
+      id: "5",
+      data: "How often is data updated using your bot mechanism",
+      des: "Yes, our bot mechanism is capable of handling large-scale data extraction projects efficiently. Whether you need to crawl thousands of product listings or monitor multiple e-commerce websites simultaneously, ENBOT's bots can scale to meet your needs while maintaining high performance and reliability.",
+    },
+  ];
 
   const [hide, setHide] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(true);
   const [isCloseIc, setIsCloseIc] = useState(false);
   const [isForm, setisForm] = useState(false);
+  // const [isPlus, setIsPlus] = useState(false);
+
   const viewForm = () => {
+    document.body.classList.add("no-scroll");
     setisForm(true);
+    formControler();
   };
+
+  const formControler = () => {
+    const navbar = document.getElementById("navbar");
+    if (window.pageYOffset > navbar.offsetTop) {
+      navbar.classList.remove("sticky");
+    }
+  };
+  const handleScroll = () => {
+    const navbar = document.getElementById("navbar");
+    if (window.pageYOffset > navbar.offsetTop) {
+      navbar.classList.add("sticky");
+    } else {
+      navbar.classList.remove("sticky");
+    }
+  };
+
+  window.addEventListener("scroll", handleScroll);
+
+
   const closeForm = () => {
+    document.body.classList.remove("no-scroll");
     setisForm(false);
   };
+
+
   const changeToClose = () => {
     setIsCloseIc(!isCloseIc);
     var navBar = document.getElementById("mobile-nav");
@@ -77,12 +129,15 @@ const Main = () => {
     navBar.style.position = "fixed";
     navBar.style.zIndex = "20";
   };
+
+
   const changeToMenu = () => {
     setIsCloseIc(!isCloseIc);
     var navBar = document.getElementById("mobile-nav");
     navBar.style.right = "-100%";
     navBar.style.transition = ".5s ease-in";
   };
+
   const changeToDarkTheme = () => {
     document.documentElement.style.setProperty("--navStickyBgcolor", "#0F0715");
     document.documentElement.style.setProperty(
@@ -206,6 +261,11 @@ const Main = () => {
       "#9596AC"
     );
 
+    document.documentElement.style.setProperty(
+      "--overlayBgColor",
+      "rgba(59, 14, 237, 0.943)"
+    );
+
     setHide(!hide);
     setIsDarkMode(true);
   };
@@ -272,7 +332,7 @@ const Main = () => {
 
     document.documentElement.style.setProperty(
       "--productivityBgColor",
-      "#36E0FF"
+      "#a3e4f0"
     );
     document.documentElement.style.setProperty(
       "--productivityHeaderColor",
@@ -327,22 +387,17 @@ const Main = () => {
       "#0F0715"
     );
 
+    document.documentElement.style.setProperty(
+      "--overlayBgColor",
+      "#000000"
+    );
+
     setHide(!hide);
     setIsDarkMode(false);
   };
-  const handleScroll = () => {
-    const navbar = document.getElementById("navbar");
-    if (window.pageYOffset > navbar.offsetTop) {
-      navbar.classList.add("sticky");
-    } else {
-      navbar.classList.remove("sticky");
-    }
-  };
 
-  window.addEventListener("scroll", handleScroll);
   return (
     <div className="main-container">
-      {/* <NavCard /> */}
       <nav id="navbar" className="navbar">
         <img
           className="nav-logo"
@@ -422,10 +477,10 @@ const Main = () => {
           </p>
           <div className="fields-container">
             <h1>Enquiry Form</h1>
-            <input type="text" placeholder="Enter your Full Name" />
-            <input type="email" placeholder="Enter your Email" />
+            <input type="text" placeholder="Full Name" />
+            <input type="email" placeholder="Email" />
             <input type="number" placeholder="Phone Number" />
-            <textarea placeholder="Enquiry notes" name="" id=""></textarea>
+            <textarea placeholder="Enquiry Notes" name="" id=""></textarea>
           </div>
           <div className="submit-container">
             <button className="submit-btn">Submit</button>
@@ -606,35 +661,14 @@ const Main = () => {
         </div>
 
         <div className="faqs-table-container">
-          <FaqComp
-            id="1"
-            data="What is data crawlink, and its businuss benefits?"
-            des="Data crawling, also known as web scraping, involves extracting data from websites to gather valuable insights for businesses. It can benefit your business by providing access to market trends, competitor analysis, pricing information, and customer sentiment, enabling informed decision-making and strategic planning."
-          />
-
-          <FaqComp
-            id="2"
-            data="How does ENBOT ensure data accuracy"
-            des="ENBOT utilizes advanced bot mechanisms and algorithms to ensure the accuracy and reliability of the data we extract. Our bots are intelligently designed to navigate websites, mimic human behavior, and extract data with precision, minimizing errors and maintaining data integrity."
-          />
-
-          <FaqComp
-            id="3"
-            data="Is the data extraction process legal and ethical?"
-            des="ENBOT adheres to all relevant laws and regulations governing data extraction, including copyright laws and website terms of service. Our bot mechanism operates within ethical boundaries, respecting the rights of website owners and prioritizing responsible data collection practices."
-          />
-
-          <FaqComp
-            id="4"
-            data="Can ENBOT handle large-scale data extraction projects"
-            des="Yes, our bot mechanism is capable of handling large-scale data extraction projects efficiently. Whether you need to crawl thousands of product listings or monitor multiple e-commerce websites simultaneously, ENBOT's bots can scale to meet your needs while maintaining high performance and reliability."
-          />
-
-          <FaqComp
-            id="5"
-            data="How often is data updated using your bot mechanism"
-            des="Yes, our bot mechanism is capable of handling large-scale data extraction projects efficiently. Whether you need to crawl thousands of product listings or monitor multiple e-commerce websites simultaneously, ENBOT's bots can scale to meet your needs while maintaining high performance and reliability."
-          />
+          {faqData.map((data, index) => (
+            <FaqComp
+              id={data.id}
+              data={data.data}
+              des={data.des}
+              index={index}
+            />
+          ))}
         </div>
       </section>
       <Footer />

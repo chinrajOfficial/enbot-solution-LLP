@@ -74,5 +74,6 @@ code {
   --mobileNavIconsColor: #36E0FF;
   --mobileNavItemBgColor: #C7C8FC;
   --mobileNavTextColor: #9596AC;
+  --overlayBgColor: rgba(59, 14, 237, 0.943);
 
 }
