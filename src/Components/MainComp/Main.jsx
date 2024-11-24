@@ -3,6 +3,7 @@ import "./Main.css";
 import { Link as ScrollLink, Element } from "react-scroll";
 import NavCard from "../NavCardComp/NavCard";
 import HomeImg from "../../Assets/HomePageImg.png";
+import WebScrapping from "../../Components/Web Scrapping/WebScrapping"
 import DarkLogo from "../../Assets/DarkLogoTheme.png";
 import LightLogo from "../../Assets/LogoLight.png";
 import { MdOutlineDarkMode, MdDarkMode } from "react-icons/md";
@@ -40,6 +41,7 @@ import { GrClose } from "react-icons/gr";
 import { RiCloseLargeLine } from "react-icons/ri";
 import Modal from "react-modal";
 import { TbBackground } from "react-icons/tb";
+import Pricing from "../Pricing/Pricing";
 const SCROLL_DURATION = 1000;
 
 const Main = () => {
@@ -397,7 +399,7 @@ const Main = () => {
   };
 
   return (
-    <div className="main-container">
+    <>
       <nav id="navbar" className="navbar">
         <img
           className="nav-logo"
@@ -565,7 +567,7 @@ const Main = () => {
           image={GrowthImg}
         />
       </Element>
-
+      <WebScrapping/>
       <Element name="products">
         <section>
           <div className="service-intro-section">
@@ -634,6 +636,7 @@ const Main = () => {
         </div>
         <img className="snake-shape-img" src={SnakeShapeImg} alt="" />
       </section>
+      <Pricing/>
 
       <section className="productivity-container">
         <div className="productivity-contents">
@@ -672,7 +675,7 @@ const Main = () => {
         </div>
       </section>
       <Footer />
-    </div>
+    </>
   );
 };
 
