@@ -6,11 +6,12 @@ import { RxCross2 } from "react-icons/rx";
 function Pricing() {
   return (
     <>
+    <h1 className='sec-headers extra-top-space'>Pricing</h1>
      <div className='pricing-main'>
       <div className='pricing-inner'>
         <div className='pricing-table'>
           <div className='pricing-row3'>
-         
+            <h3>Downloaded Response per Month</h3>
           </div>
          <div className='pricing-column'>
          <div  className='pricing-row1'>
@@ -31,7 +32,7 @@ function Pricing() {
         <div className='pricing-table-row'>
            <div className='pricing-row2'>
            <h3>Pricing</h3>
-           <img src={tag} alt="" />
+           {/* <img src={tag} alt="" /> */}
            </div>
            <div  className='pricing-row'>
            <h5>Per GB$ 10.75</h5>
@@ -45,68 +46,68 @@ function Pricing() {
         </div>
         <div className='pricing-table-row'>
            <div  className='pricing-row2'>
-           <h3>JavaScript rendering</h3>
-           <img src={tag} alt="" />
+           <h3 className='pricing-values'>JavaScript rendering</h3>
+           {/* <img src={tag} alt="" /> */}
            </div>
            <div  className='pricing-row'>
-           <IoMdCheckmark style={{color:"green"}}/>
+           <IoMdCheckmark className='tick-icon'/>
            </div>
            <div  className='pricing-row'>
-           <IoMdCheckmark style={{color:"green"}}/>
+           <IoMdCheckmark className='tick-icon'/>
            </div>
-           <div  className='pricing-row'> <IoMdCheckmark style={{color:"green"}}/></div>
+           <div  className='pricing-row'> <IoMdCheckmark className='tick-icon'/></div>
         </div>
         <div className='pricing-table-row'>
            <div  className='pricing-row2'>
-           <h3>Rotating & Premium Proxies</h3>
-           <img src={tag} alt="" />
+           <h3 className='pricing-values'>Rotating & Premium Proxies</h3>
+           {/* <img src={tag} alt="" /> */}
            </div>
            <div  className='pricing-row'>
-           <IoMdCheckmark style={{color:"green"}}/>
+           <IoMdCheckmark className='tick-icon'/>
            </div>
            <div  className='pricing-row'>
-           <IoMdCheckmark style={{color:"green"}}/>
+           <IoMdCheckmark className='tick-icon'/>
            </div>
-           <div  className='pricing-row'> <IoMdCheckmark style={{color:"green"}}/></div>
+           <div  className='pricing-row'> <IoMdCheckmark className='tick-icon'/></div>
         </div>
         <div className='pricing-table-row'>
            <div  className='pricing-row2'>
-           <h3>Geotargeting</h3>
-           <img src={tag} alt="" />
+           <h3 className='pricing-values'>Geotargeting</h3>
+           {/* <img src={tag} alt="" /> */}
            </div>
            <div  className='pricing-row'>
-           <IoMdCheckmark style={{color:"green"}}/>
+           <IoMdCheckmark className='tick-icon'/>
            </div>
            <div  className='pricing-row'>
-           <IoMdCheckmark style={{color:"green"}}/>
+           <IoMdCheckmark className='tick-icon'/>
            </div>
-           <div  className='pricing-row'> <IoMdCheckmark style={{color:"green"}}/></div>
+           <div  className='pricing-row'> <IoMdCheckmark className='tick-icon'/></div>
+        </div>
+        <div className='pricing-table-row'>
+           <div className='pricing-row2'>
+           <h3 className='pricing-values'>Priority Email Support</h3>
+           {/* <img src={tag} alt="" /> */}
+           </div>
+           <div  className='pricing-row'>
+           <RxCross2 className='close-icon'/>
+           </div>
+           <div  className='pricing-row'>
+           <IoMdCheckmark className='tick-icon'/>
+           </div>
+           <div  className='pricing-row'> <IoMdCheckmark className='tick-icon'/></div>
         </div>
         <div className='pricing-table-row'>
            <div  className='pricing-row2'>
-           <h3>Priority Email Support</h3>
-           <img src={tag} alt="" />
+           <h3 className='pricing-values'>Dedicated Manager</h3>
+           {/* <img src={tag} alt="" /> */}
            </div>
            <div  className='pricing-row'>
-           <RxCross2 style={{color:"red"}}/>
+           <RxCross2 className='close-icon'/>
            </div>
            <div  className='pricing-row'>
-           <IoMdCheckmark style={{color:"green"}}/>
+           <RxCross2 className='close-icon'/>
            </div>
-           <div  className='pricing-row'> <IoMdCheckmark style={{color:"green"}}/></div>
-        </div>
-        <div className='pricing-table-row'>
-           <div  className='pricing-row2'>
-           <h3>Dedicated Manager</h3>
-           <img src={tag} alt="" />
-           </div>
-           <div  className='pricing-row'>
-           <RxCross2 style={{color:"red"}}/>
-           </div>
-           <div  className='pricing-row'>
-           <RxCross2 style={{color:"red"}}/>
-           </div>
-           <div  className='pricing-row'> <IoMdCheckmark style={{color:"green"}}/></div>
+           <div  className='pricing-row'> <IoMdCheckmark className='tick-icon'/></div>
         </div>
         </div>
       </div>

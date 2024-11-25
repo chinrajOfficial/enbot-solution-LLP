@@ -36,6 +36,10 @@ const NavCard = ({setIsCloseIc, isCloseIc}) => {
                 <ScrollLink className="NavMenu" to="products" spy={true} smooth={true} duration={600} onClick={changeMenuView}>Products</ScrollLink>
             </li>
             <li className='NavItem'>
+                <AiOutlineProduct className='NavMenuIcon'/>
+                <ScrollLink className="NavMenu" to="pricing" spy={true} smooth={true} duration={700} onClick={changeMenuView}>Pricing</ScrollLink>
+            </li>
+            <li className='NavItem'>
                 <RiContactsLine className='NavMenuIcon'/>
                 <ScrollLink className="NavMenu" to="contact" spy={true} smooth={true} duration={SCROLL_DURATION} onClick={changeMenuView}>Contact Us</ScrollLink>
             </li>

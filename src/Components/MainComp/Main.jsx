@@ -42,6 +42,8 @@ import { RiCloseLargeLine } from "react-icons/ri";
 import Modal from "react-modal";
 import { TbBackground } from "react-icons/tb";
 import Pricing from "../Pricing/Pricing";
+import FeatureImg from "../../Assets/FeaturesHomwImg.png"
+import { VscRadioTower } from "react-icons/vsc";
 const SCROLL_DURATION = 1000;
 
 const Main = () => {
@@ -268,6 +270,11 @@ const Main = () => {
       "rgba(59, 14, 237, 0.943)"
     );
 
+    document.documentElement.style.setProperty(
+      "--pricingTextColor",
+      "rgb(191,190,204)"
+    );
+
     setHide(!hide);
     setIsDarkMode(true);
   };
@@ -393,6 +400,10 @@ const Main = () => {
       "--overlayBgColor",
       "#000000"
     );
+    document.documentElement.style.setProperty(
+      "--pricingTextColor",
+      "#3d3f4a"
+    );
 
     setHide(!hide);
     setIsDarkMode(false);
@@ -431,6 +442,11 @@ const Main = () => {
           <li>
             <ScrollLink to="products" spy={true} smooth={true} duration={600}>
               Products
+            </ScrollLink>
+          </li>
+          <li>
+            <ScrollLink to="pricing" spy={true} smooth={true} duration={700}>
+              Pricing
             </ScrollLink>
           </li>
           <li>
@@ -567,6 +583,12 @@ const Main = () => {
           image={GrowthImg}
         />
       </Element>
+      <section className="features-section">
+        <div className="features-container">
+          <h1 className="feature-header">Powerful Web Scraping Framework</h1>
+          <img src={FeatureImg} alt="" />
+        </div>
+      </section>
       <WebScrapping/>
       <Element name="products">
         <section>
@@ -619,6 +641,10 @@ const Main = () => {
         </section>
       </Element>
 
+      <Element name="pricing">
+        <Pricing/>
+      </Element>
+
       <section className="experience-container">
         <img className="baloon" src={BaloonImg} alt="" />
         <div className="ex-menu-container">
@@ -636,7 +662,7 @@ const Main = () => {
         </div>
         <img className="snake-shape-img" src={SnakeShapeImg} alt="" />
       </section>
-      <Pricing/>
+      
 
       <section className="productivity-container">
         <div className="productivity-contents">

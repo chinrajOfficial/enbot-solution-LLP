@@ -75,5 +75,9 @@ code {
   --mobileNavItemBgColor: #C7C8FC;
   --mobileNavTextColor: #9596AC;
   --overlayBgColor: rgba(59, 14, 237, 0.943);
+  --pricingtickIconColor: green;
+  --pricingCloseIconColor: red;
+  --pricingTextColor: rgb(191,190,204);
+  --featureHeaderColor: #BFBECC;;
 
 }

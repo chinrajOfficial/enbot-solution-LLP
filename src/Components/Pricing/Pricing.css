@@ -4,15 +4,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: rgb(191,190,204);
+    color: var(--pricingTextColor);
 }
 .pricing-inner{
     width: 80%;
     height: 90%;
     display: flex;
-    /* align-items: center; */
     flex-direction: column;
-    /* justify-content: space-between; */
 }
 .pricing-left{
     width: 35%;
@@ -22,7 +20,12 @@
     gap: 50px;
 
 }
-
+.pricing-values{
+    font-weight: 400;
+}
+.extra-top-space{
+    margin-top: 70px !important;
+}
 .pricing-tag{
     display: flex;
     gap: 5px;
@@ -31,6 +34,17 @@
 .pricing-row2 img{
     width: 30px;
     height: 30px;
+}
+.tick-icon{
+    color: var(--pricingtickIconColor);
+}
+.tick-icon:hover{
+    transform: scale(1.5);
+    transition: .2s;
+    cursor: pointer;
+}
+.close-icon{
+    color: var(--pricingCloseIconColor);
 }
 .pricing-inner-right h5{
  font-size: 18px;
@@ -91,6 +105,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 20px;
+    border-radius: 10px;
+}
+.pricing-table-row:hover{
+    background-color: rgba(120, 95, 233, 0.084);
+    cursor: pointer;
+    transition: .4s linear;
 }
 .pricing-column{
     width: 100%;
@@ -104,6 +125,9 @@
 }
 .pricing-row3{
     width: 32%;
+    text-align: start;
+    line-height: 30px;
+    padding: 0 20px;
 }
 @media screen and (max-width:768px){
     .pricing-main{
@@ -114,15 +138,13 @@
         justify-content: flex-start;
         overflow-x: scroll;
         padding: 20px;
-        color: rgb(191,190,204);
+        color: var(--pricingTextColor);
     }
     .pricing-inner{
         width: 1200px;
         height: 90%;
         display: flex;
-        /* align-items: center; */
         flex-direction: column;
-        /* justify-content: space-between; */
     }
     .pricing-left{
         width: 35%;
@@ -216,4 +238,7 @@
     .pricing-row3{
         width: 300px;
     } 
+    .extra-top-space{
+        margin-top: 30px;
+    }
 }
