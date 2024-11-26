@@ -582,7 +582,7 @@ input[type="number"]::-webkit-inner-spin-button {
         width: 80%;
     }
     .service-intro-section p{
-        width: 90%;
+        width: 100%;
     }
     .ex-menu-container h1 {
         font-size: 28px;
@@ -637,6 +637,7 @@ input[type="number"]::-webkit-inner-spin-button {
         font-size: 30px;
     }
     .features-container{
+        width: 80%;
         margin: 50px auto;
     }
     .features-container img{

@@ -25,7 +25,9 @@ const Footer = () => {
                         <ScrollLink className="footer-menus" to="home" spy={true} smooth={true} duration={SCROLL_DURATION}>Home</ScrollLink>
                         <ScrollLink className="footer-menus" to="services" spy={true} smooth={true} duration={200}>Services</ScrollLink>
                         <ScrollLink className="footer-menus" to="about" spy={true} smooth={true} duration={400}>About Us</ScrollLink>
+                        <ScrollLink className="footer-menus" to="about" spy={true} smooth={true} duration={400}>Features</ScrollLink>
                         <ScrollLink className="footer-menus" to="products" spy={true} smooth={true} duration={600}>Products</ScrollLink>
+                        <ScrollLink className="footer-menus" to="products" spy={true} smooth={true} duration={600}>Pricing</ScrollLink>
                     </div>
                     <div className='footer-first-container'>
                         <h2 className=''>Support</h2>

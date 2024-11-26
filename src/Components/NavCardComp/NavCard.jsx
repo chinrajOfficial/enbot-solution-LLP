@@ -7,7 +7,9 @@ import { LiaBookSolid } from "react-icons/lia";
 import { AiOutlineProduct } from "react-icons/ai";
 import { RiContactsLine } from "react-icons/ri";
 import { Link as ScrollLink, Element } from "react-scroll";
-import { SiPlatformio } from "react-icons/si";
+import { GiPriceTag } from "react-icons/gi";
+import { MdOutlineFeaturedVideo } from "react-icons/md";
+
 const SCROLL_DURATION = 1000;
 const NavCard = ({setIsCloseIc, isCloseIc}) => {
   const changeMenuView = () => {
@@ -32,11 +34,15 @@ const NavCard = ({setIsCloseIc, isCloseIc}) => {
                 <ScrollLink className="NavMenu" to="about" spy={true} smooth={true} duration={400} onClick={changeMenuView}>About</ScrollLink>
             </li>
             <li className='NavItem'>
+                <MdOutlineFeaturedVideo className='NavMenuIcon'/>
+                <ScrollLink className="NavMenu" to="features" spy={true} smooth={true} duration={500} onClick={changeMenuView}>Features</ScrollLink>
+            </li>
+            <li className='NavItem'>
                 <AiOutlineProduct className='NavMenuIcon'/>
                 <ScrollLink className="NavMenu" to="products" spy={true} smooth={true} duration={600} onClick={changeMenuView}>Products</ScrollLink>
             </li>
             <li className='NavItem'>
-                <AiOutlineProduct className='NavMenuIcon'/>
+                <GiPriceTag className='NavMenuIcon'/>
                 <ScrollLink className="NavMenu" to="pricing" spy={true} smooth={true} duration={700} onClick={changeMenuView}>Pricing</ScrollLink>
             </li>
             <li className='NavItem'>

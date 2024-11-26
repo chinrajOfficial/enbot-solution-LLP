@@ -363,6 +363,11 @@ const Main = () => {
             </ScrollLink>
           </li>
           <li>
+            <ScrollLink to="about" spy={true} smooth={true} duration={500}>
+              Features
+            </ScrollLink>
+          </li>
+          <li>
             <ScrollLink to="products" spy={true} smooth={true} duration={600}>
               Products
             </ScrollLink>
@@ -506,12 +511,14 @@ const Main = () => {
           image={GrowthImg}
         />
       </Element>
-      <section className="features-section">
-        <div className="features-container">
-          <h1 className="feature-header">Powerful Web Scraping Framework</h1>
-          <img src={FeatureImg} alt="" />
-        </div>
-      </section>
+      <Element name="features">
+        <section className="features-section">
+          <div className="features-container">
+            <h1 className="feature-header">Powerful Web Scraping Framework</h1>
+            <img src={FeatureImg} alt="" />
+          </div>
+        </section>
+      </Element>
       <WebScrapping/>
       <Element name="products">
         <section>
