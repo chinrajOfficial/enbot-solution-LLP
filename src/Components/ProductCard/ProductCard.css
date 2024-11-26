@@ -8,12 +8,10 @@
 }
 .product-card{
     width: 100%;
-    height: 350px;
+    height: 280px;
     padding: 25px;
-    height: 350px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     gap: 20px;
     align-items: start;
     border-radius: 20px;
@@ -37,6 +35,7 @@
 .product-card h1{
     color: var(--secondaryTextColor);
     text-align: start;
+    font-size: 20px;
 }
 @media(max-width:1200px){
     .product-flex-container {
@@ -44,6 +43,8 @@
     }
     .product-card{
         border: 1px solid var(--whiteColor);
+        height: 300px;
+        justify-content: center;
     }
     
 }

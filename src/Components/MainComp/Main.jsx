@@ -43,8 +43,7 @@ import Modal from "react-modal";
 import { TbBackground } from "react-icons/tb";
 import Pricing from "../Pricing/Pricing";
 import FeatureImg from "../../Assets/FeaturesHomwImg.png"
-import { VscRadioTower } from "react-icons/vsc";
-import { Link } from 'react-scroll';
+
 const SCROLL_DURATION = 1000;
 
 const Main = () => {
@@ -94,7 +93,6 @@ const Main = () => {
   const [isDarkMode, setIsDarkMode] = useState(true);
   const [isCloseIc, setIsCloseIc] = useState(false);
   const [isForm, setisForm] = useState(false);
-  // const [isPlus, setIsPlus] = useState(false);
 
   const viewForm = () => {
     document.body.classList.add("no-scroll");
@@ -334,6 +332,7 @@ const Main = () => {
     setHide(!hide);
     setIsDarkMode(false);
   };
+
 
   return (
     <>
@@ -615,7 +614,7 @@ const Main = () => {
           <FaArrowRight />
         </button>
       </section>
-
+     
       <section className="faqs-container">
         <div className="faqs-contents">
           <p>OUR FAQS</p>

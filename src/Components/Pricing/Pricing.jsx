@@ -51,10 +51,10 @@ function Pricing() {
            {/* <img src={tag} alt="" /> */}
            </div>
            <div  className='pricing-row'>
-           <h5>Per GB$ 10.75</h5>
+           <h5>Per GB 10.75$</h5>
            </div>
            <div  className='pricing-row'>
-           <h5>Per GB$ 9.75</h5>
+           <h5>Per GB 9.75$</h5>
            </div>
            <div className='pricing-row'>
            <h5>Custom</h5>
