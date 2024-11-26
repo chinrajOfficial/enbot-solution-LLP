@@ -108,7 +108,7 @@
     border-radius: 10px;
 }
 .pricing-table-row:hover{
-    background-color: rgba(120, 95, 233, 0.084);
+    background-color: var(--tableRogBgColor);
     cursor: pointer;
     transition: .4s linear;
     font-weight: 600;

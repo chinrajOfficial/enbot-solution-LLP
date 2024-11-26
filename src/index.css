@@ -81,5 +81,7 @@ code {
   --featureHeaderColor: #BFBECC;
   --webScrapDivBorderColor: #CAE8F5;
   --FeatureHeaderColor: #BFBECC;
+  --tableRogBgColor: rgba(120, 95, 233, 0.084);
+  /* --tableRogBgColor: rgba(41, 41, 56, 0.784); */
 
 }

@@ -22,12 +22,12 @@ const Footer = () => {
                 <div className='footer-second-child'>
                     <div className='footer-first-container'>
                         <h2 className=''>Quick Links</h2>
-                        <ScrollLink className="footer-menus" to="home" spy={true} smooth={true} duration={SCROLL_DURATION}>Home</ScrollLink>
-                        <ScrollLink className="footer-menus" to="services" spy={true} smooth={true} duration={200}>Services</ScrollLink>
-                        <ScrollLink className="footer-menus" to="about" spy={true} smooth={true} duration={400}>About Us</ScrollLink>
-                        <ScrollLink className="footer-menus" to="about" spy={true} smooth={true} duration={400}>Features</ScrollLink>
-                        <ScrollLink className="footer-menus" to="products" spy={true} smooth={true} duration={600}>Products</ScrollLink>
-                        <ScrollLink className="footer-menus" to="products" spy={true} smooth={true} duration={600}>Pricing</ScrollLink>
+                        <ScrollLink className="footer-menus" to="home" spy={true} duration={SCROLL_DURATION}>Home</ScrollLink>
+                        <ScrollLink className="footer-menus" to="services" spy={true}  duration={200} offset={-200}>Services</ScrollLink>
+                        <ScrollLink className="footer-menus" to="about" spy={true}  duration={400} offset={-80}>About Us</ScrollLink>
+                        <ScrollLink className="footer-menus" to="features" spy={true}  duration={400} offset={-200}>Features</ScrollLink>
+                        <ScrollLink className="footer-menus" to="products" spy={true}  duration={600} offset={-200}>Products</ScrollLink>
+                        <ScrollLink className="footer-menus" to="pricing" spy={true}  duration={600} offset={-100}>Pricing</ScrollLink>
                     </div>
                     <div className='footer-first-container'>
                         <h2 className=''>Support</h2>

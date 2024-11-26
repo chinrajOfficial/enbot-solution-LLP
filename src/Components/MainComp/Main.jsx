@@ -44,6 +44,7 @@ import { TbBackground } from "react-icons/tb";
 import Pricing from "../Pricing/Pricing";
 import FeatureImg from "../../Assets/FeaturesHomwImg.png"
 import { VscRadioTower } from "react-icons/vsc";
+import { Link } from 'react-scroll';
 const SCROLL_DURATION = 1000;
 
 const Main = () => {
@@ -280,6 +281,7 @@ const Main = () => {
       "#CAE8F5"
     );
     document.documentElement.style.setProperty("--FeatureHeaderColor","#BFBECC");
+    document.documentElement.style.setProperty("--tableRogBgColor","rgba(120, 95, 233, 0.084)");
 
     setHide(!hide);
     setIsDarkMode(true);
@@ -327,6 +329,7 @@ const Main = () => {
     document.documentElement.style.setProperty("--pricingTextColor", "#3d3f4a");
     document.documentElement.style.setProperty("--webScrapDivBorderColor","#F5F5F5");
     document.documentElement.style.setProperty("--FeatureHeaderColor","#0F0715");
+    document.documentElement.style.setProperty("--tableRogBgColor","rgba(41, 41, 56, 0.784)");
 
     setHide(!hide);
     setIsDarkMode(false);
@@ -346,34 +349,33 @@ const Main = () => {
               className="nav-active-menu"
               to="home"
               spy={true}
-              smooth={true}
               duration={SCROLL_DURATION}
             >
               Home
             </ScrollLink>
           </li>
           <li>
-            <ScrollLink to="services" spy={true} smooth={true} duration={200}>
+            <ScrollLink to="services" spy={true} duration={200} offset={-200}>
               Services
             </ScrollLink>
           </li>
           <li>
-            <ScrollLink to="about" spy={true} smooth={true} duration={400}>
+            <ScrollLink to="about" spy={true} duration={400} offset={-80}>
               About
             </ScrollLink>
           </li>
           <li>
-            <ScrollLink to="about" spy={true} smooth={true} duration={500}>
+            <ScrollLink to="features" spy={true} duration={500} offset={-200}>
               Features
             </ScrollLink>
           </li>
           <li>
-            <ScrollLink to="products" spy={true} smooth={true} duration={600}>
+            <ScrollLink to="products" spy={true} duration={600} offset={-200}>
               Products
             </ScrollLink>
           </li>
           <li>
-            <ScrollLink to="pricing" spy={true} smooth={true} duration={700}>
+            <ScrollLink to="pricing" spy={true} duration={700} offset={-100}>
               Pricing
             </ScrollLink>
           </li>
@@ -381,8 +383,8 @@ const Main = () => {
             <ScrollLink
               to="contact"
               spy={true}
-              smooth={true}
               duration={SCROLL_DURATION}
+              offset={-300}
             >
               Contact
             </ScrollLink>
@@ -411,6 +413,7 @@ const Main = () => {
           <NavCard setIsCloseIc={setIsCloseIc} isCloseIc={isCloseIc} />
         </div>
       </nav>
+
       <Modal
         isOpen={isForm}
         onRequestClose={closeForm}
@@ -445,7 +448,7 @@ const Main = () => {
       <Element name="services" className="service-section">
         <div className="service-intro-section">
           <div className="header-container">
-            <h2 className="sec-headers">Services</h2>
+              <h2 className="sec-headers">Services</h2>
           </div>
           <h1>Unveiling Our Unique Edge.</h1>
           <p>
