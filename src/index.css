@@ -78,6 +78,8 @@ code {
   --pricingtickIconColor: green;
   --pricingCloseIconColor: red;
   --pricingTextColor: rgb(191,190,204);
-  --featureHeaderColor: #BFBECC;;
+  --featureHeaderColor: #BFBECC;
+  --webScrapDivBorderColor: #CAE8F5;
+  --FeatureHeaderColor: #BFBECC;
 
 }

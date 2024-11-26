@@ -6,7 +6,7 @@ function WebScrapping() {
     <div className='web-main'>
        <div className='web-inner'>
        <div className='web-img'>
-            <img src={WebScrapping1} alt="" />
+            <img className='webscrap-img' src={WebScrapping1} alt="" />
         </div>
         <div className='web-contn'>
               <h1>Web Scrapping: </h1>

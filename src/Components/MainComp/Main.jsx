@@ -275,135 +275,58 @@ const Main = () => {
       "rgb(191,190,204)"
     );
 
+    document.documentElement.style.setProperty(
+      "--webScrapDivBorderColor",
+      "#CAE8F5"
+    );
+    document.documentElement.style.setProperty("--FeatureHeaderColor","#BFBECC");
+
     setHide(!hide);
     setIsDarkMode(true);
   };
 
   const changeToLightTheme = () => {
     document.documentElement.style.setProperty("--backgroundColor", "#F5F5F5");
-    document.documentElement.style.setProperty(
-      "--secondaryTextColor",
-      "#3d3f4a"
-    );
+    document.documentElement.style.setProperty("--secondaryTextColor","#3d3f4a");
     document.documentElement.style.setProperty("--navStickyBgcolor", "#F5F5F5");
-    document.documentElement.style.setProperty(
-      "--navFirstMenuColor",
-      "#7078F9"
-    );
-    document.documentElement.style.setProperty(
-      "--navSecondMenuColor",
-      "#7E5EF7"
-    );
+    document.documentElement.style.setProperty("--navFirstMenuColor","#7078F9");
+    document.documentElement.style.setProperty("--navSecondMenuColor","#7E5EF7");
     document.documentElement.style.setProperty("--activeMenuColor", "#7078F9");
     document.documentElement.style.setProperty("--menuIconColor", "#000000");
-    document.documentElement.style.setProperty(
-      "--homeFirstHeadingColor",
-      "#36E0FF"
-    );
-    document.documentElement.style.setProperty(
-      "--homeSecondHeadingColor",
-      "#8650F6"
-    );
-
-    document.documentElement.style.setProperty(
-      "--serviceCardBgColor",
-      "#ffffff"
-    );
-    document.documentElement.style.setProperty(
-      "--serviceCardSecondBgColor",
-      "rgb(171, 224, 240, 0.932)"
-    );
-    document.documentElement.style.setProperty(
-      "--serviceImgFirstBgColor",
-      "#ffffff"
-    );
-    document.documentElement.style.setProperty(
-      "--serviceImgSecondBgColor",
-      "#a5edf4"
-    );
-    document.documentElement.style.setProperty(
-      "--serviceCardBorderColor",
-      "#ffffff"
-    );
-    document.documentElement.style.setProperty(
-      "--serviceCardBorderHoverColor",
-      "#0F0715"
-    );
-
-    document.documentElement.style.setProperty(
-      "--productCardFirstBgColor",
-      "#f5f5f5"
-    );
-    document.documentElement.style.setProperty(
-      "--productCardSecondBgColor",
-      "#f5f5f5"
-    );
-
-    document.documentElement.style.setProperty(
-      "--productivityBgColor",
-      "#a3e4f0"
-    );
-    document.documentElement.style.setProperty(
-      "--productivityHeaderColor",
-      "#3d3f4a"
-    );
-
+    document.documentElement.style.setProperty("--homeFirstHeadingColor","#36E0FF");
+    document.documentElement.style.setProperty("--homeSecondHeadingColor","#8650F6");
+    document.documentElement.style.setProperty("--serviceCardBgColor","#ffffff");
+    document.documentElement.style.setProperty("--serviceCardSecondBgColor","rgb(171, 224, 240, 0.932)");
+    document.documentElement.style.setProperty("--serviceImgFirstBgColor","#ffffff");
+    document.documentElement.style.setProperty("--serviceImgSecondBgColor","#a5edf4");
+    document.documentElement.style.setProperty("--serviceCardBorderColor","#ffffff");
+    document.documentElement.style.setProperty("--serviceCardBorderHoverColor","#0F0715");
+    document.documentElement.style.setProperty("--productCardFirstBgColor","#f5f5f5");
+    document.documentElement.style.setProperty("--productCardSecondBgColor","#f5f5f5");
+    document.documentElement.style.setProperty("--productivityBgColor","#a3e4f0");
+    document.documentElement.style.setProperty("--productivityHeaderColor","#3d3f4a");
     document.documentElement.style.setProperty("--tableBgColor", "#F5F5F5");
     document.documentElement.style.setProperty("--tableBorderColor", "#2D2E41");
     document.documentElement.style.setProperty("--tableTextColor", "#3F3E3E");
-
     document.documentElement.style.setProperty("--footerBgColor", "#F5F5F5");
-    document.documentElement.style.setProperty(
-      "--footerBorderColor",
-      "#000000"
-    );
-    document.documentElement.style.setProperty(
-      "--footerAngerTextColor",
-      "#3d3f4a"
-    );
-    document.documentElement.style.setProperty(
-      "--footerHeaderTextColor",
-      "#3F3E3E"
-    );
-    document.documentElement.style.setProperty(
-      "--footerAngerHoverTextColor",
-      "#8650F6"
-    );
+    document.documentElement.style.setProperty("--footerBorderColor","#000000");
+    document.documentElement.style.setProperty("--footerAngerTextColor","#3d3f4a");
+    document.documentElement.style.setProperty("--footerHeaderTextColor","#3F3E3E");
+    document.documentElement.style.setProperty("--footerAngerHoverTextColor","#8650F6");
     document.documentElement.style.setProperty("--footerIconsColor", "#3d3f4a");
-    document.documentElement.style.setProperty(
-      "--footerIconsHoverColor",
-      "#0F0715"
-    );
+    document.documentElement.style.setProperty("--footerIconsHoverColor","#0F0715");
     document.documentElement.style.setProperty("--footerBtnColor", "#3d3f4a");
     document.documentElement.style.setProperty("--footerMailColor", "#0F0715");
     document.documentElement.style.setProperty("--menuIconColor", "#0F0715");
-    document.documentElement.style.setProperty(
-      "--socialMediaIconBgColor",
-      "#F5F5F5"
-    );
-    document.documentElement.style.setProperty(
-      "--socialMediaIconBorderColor",
-      "#0F0715"
-    );
-
+    document.documentElement.style.setProperty("--socialMediaIconBgColor","#F5F5F5");
+    document.documentElement.style.setProperty("--socialMediaIconBorderColor","#0F0715");
     document.documentElement.style.setProperty("--mobileNavBgColor", "#F5F5F5");
-    document.documentElement.style.setProperty(
-      "--mobileNavIconsColor",
-      "#8650F6"
-    );
-    document.documentElement.style.setProperty(
-      "--mobileNavTextColor",
-      "#0F0715"
-    );
-
-    document.documentElement.style.setProperty(
-      "--overlayBgColor",
-      "#000000"
-    );
-    document.documentElement.style.setProperty(
-      "--pricingTextColor",
-      "#3d3f4a"
-    );
+    document.documentElement.style.setProperty("--mobileNavIconsColor","#8650F6");
+    document.documentElement.style.setProperty("--mobileNavTextColor","#0F0715");
+    document.documentElement.style.setProperty("--overlayBgColor", "#000000");
+    document.documentElement.style.setProperty("--pricingTextColor", "#3d3f4a");
+    document.documentElement.style.setProperty("--webScrapDivBorderColor","#F5F5F5");
+    document.documentElement.style.setProperty("--FeatureHeaderColor","#0F0715");
 
     setHide(!hide);
     setIsDarkMode(false);

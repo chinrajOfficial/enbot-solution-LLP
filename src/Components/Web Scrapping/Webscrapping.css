@@ -20,14 +20,19 @@
     display: flex;
     margin-right: 30px;
     /* background-color: #CAE8F5; */
-    border: 1px solid #CAE8F5;
+    border: 1px solid var(--webScrapDivBorderColor);
     border-radius: 20px;
 }
-.web-img img{
+.webscrap-img{
      width: 100%;
      height: 100%;
      border-radius: 40px;
      object-fit: cover;
+}
+.web-img:hover .webscrap-img{
+    transform: scale(1.1);
+    transition: .2s;
+    cursor: pointer;
 }
 .web-contn{
     width: 100%;
@@ -55,13 +60,13 @@
     line-height: 20px;
     font-size: 18px;
 }
-@media screen and (max-width:768px){
+@media screen and (max-width:600px){
     .web-main{
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-bottom: 100px;
+        margin-bottom: 10px;
         color: var(--pricingTextColor);
         padding: 40px;
       
@@ -81,7 +86,7 @@
         display: flex;
         margin-right: 0px;
     }
-    .web-img img{
+    .webscrap-img{
          width: 100%;
          height: 100%;
          border-radius: 40px;

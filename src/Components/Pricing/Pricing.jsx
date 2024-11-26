@@ -3,6 +3,7 @@ import './Pricing.css';
 import tag from "../../Assets/icon-info-grey.svg"
 import { IoMdCheckmark } from "react-icons/io";
 import { RxCross2 } from "react-icons/rx";
+import { FaLessThan } from "react-icons/fa6";
 function Pricing() {
   return (
     <>
@@ -11,7 +12,7 @@ function Pricing() {
       <div className='pricing-inner'>
         <div className='pricing-table'>
           <div className='pricing-row3'>
-            <h3>Downloaded Response per Month</h3>
+            {/* <h3>Downloaded Response per Month</h3> */}
           </div>
          <div className='pricing-column'>
          <div  className='pricing-row1'>
@@ -31,7 +32,22 @@ function Pricing() {
         <div className='pricing-head'>
         <div className='pricing-table-row'>
            <div className='pricing-row2'>
-           <h3>Pricing</h3>
+           <h3 className='table-left-header'>Downloaded Response per Month</h3>
+           {/* <img src={tag} alt="" /> */}
+           </div>
+           <div  className='pricing-row'>
+           <h5>&lt; 2TB</h5>
+           </div>
+           <div  className='pricing-row'>
+           <h5>&lt; 3TB</h5>
+           </div>
+           <div className='pricing-row'>
+           <h5>&lt; 5TB</h5>
+          </div>
+        </div>
+        <div className='pricing-table-row'>
+           <div className='pricing-row2'>
+           <h3 className='pricing-values'>Pricing</h3>
            {/* <img src={tag} alt="" /> */}
            </div>
            <div  className='pricing-row'>
