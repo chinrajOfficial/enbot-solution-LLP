@@ -427,8 +427,151 @@ input[type="number"]::-webkit-inner-spin-button {
     font-size: 45px;
     color: var(--FeatureHeaderColor);
   }
+  
+
+ 
+.reach-us-btn {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .reach-us-btn:hover {
+    background-color: #45a049;
+  }
+  
+  /* Modal Styling */
+  .custom-modal {
+    background: white;
+    width: 50%;
+    height: 60vh;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow-y: scroll;
+  }
+  
+  .custom-overlay {
+    background: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Editor Styling */
+  .editor-wrapper {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px 0;
+    min-height: 200px;
+    border-radius: 4px;
+  }
+  
+  .editor-toolbar {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+  }
+  
+  .editor {
+    min-height: 150px;
+    padding: 10px;
+  }
+  
+  /* Modal Action Buttons */
+  .modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  
+  .send-mail-btn {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .send-mail-btn:hover {
+    background-color: #45a049;
+  }
+  
+  .close-modal-btn {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .close-modal-btn:hover {
+    background-color: #d32f2f;
+  }
+  
 
 
+  /* Email Fields */
+.email-field {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 14px;
+  }
+  
+  .email-field label {
+    font-weight: bold;
+    margin-right: 10px;
+    min-width: 50px;
+  }
+  
+  .email-input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .email-input:focus {
+    outline: none;
+    border-color: #4caf50;
+  }
+  
+  .emoji-popup {
+    max-height: 200px;
+    overflow-y: auto;
+    background: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  /* Rest of the styling remains the same as before */
+
+ 
+   /* Modal Actions */
+   .modal-actions {
+    display: flex;
+    justify-content: space-between;
+    /* margin-top: 20px; */
+  }
 
 
 @media(max-width:1200px){

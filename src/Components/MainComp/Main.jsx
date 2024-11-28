@@ -39,12 +39,17 @@ import { SiPlatformio } from "react-icons/si";
 import { FiSun } from "react-icons/fi";
 import { GrClose } from "react-icons/gr";
 import { RiCloseLargeLine } from "react-icons/ri";
-import Modal from "react-modal";
 import { TbBackground } from "react-icons/tb";
 import Pricing from "../Pricing/Pricing";
 import FeatureImg from "../../Assets/FeaturesHomwImg.png"
 
+import Modal from "react-modal";
+import { EditorState } from "draft-js";
+import { Editor } from "react-draft-wysiwyg";
+import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
+
 const SCROLL_DURATION = 1000;
+Modal.setAppElement("#root");
 
 const Main = () => {
   const customStyles = {
@@ -334,6 +339,41 @@ const Main = () => {
   };
 
 
+  const [isModalOpen, setModalOpen] = useState(false);
+  const [editorState, setEditorState] = useState(EditorState.createEmpty());
+  const [toEmail, setToEmail] = useState(""); // State for 'To' email
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const openModal = () => setModalOpen(true);
+
+  // Close Modal
+  const closeModal = () => {
+    setModalOpen(false);
+    setErrorMessage(""); // Clear error on close
+  };
+  // Handle Editor State Change
+  const handleEditorChange = (state) => {
+    setEditorState(state);
+    console.log('Editor state changed:', state);
+  };
+
+  // Handle Mail Sending
+  const sendEmail = () => {
+    const content = editorState.getCurrentContent().getPlainText();
+    if (!toEmail) {
+      setErrorMessage("Please fill in the recipient's email address!");
+      setTimeout(() => {
+        setErrorMessage("");
+      }, 2000);
+      return;
+    }
+    closeModal();
+  };
+
+  const handleEmailClick = () => {
+    const mailto = `mailto:support@enbotsolutions.com?subject=Need%20Assistance&body=Hello%20Team,%0D%0A%0D%0AWrite%20your%20message%20here.%0D%0A%0D%0ARegards,%0D%0A[enbot%20Name]`;
+    window.location.href = mailto;
+  };
   return (
     <>
       <nav id="navbar" className="navbar">
@@ -354,7 +394,7 @@ const Main = () => {
             </ScrollLink>
           </li>
           <li>
-            <ScrollLink to="services" spy={true} duration={200} offset={-200}>
+            <ScrollLink to="services" spy={true} duration={200} offset={-320}>
               Services
             </ScrollLink>
           </li>
@@ -609,10 +649,77 @@ const Main = () => {
           </p>
         </div>
         <img src={RocketManImg} alt="" />
-        <button className="reach-us-btn">
+        {/* <button className="reach-us-btn">
           <span>Reach Us</span>
           <FaArrowRight />
-        </button>
+        </button> */}
+
+      <button className="reach-us-btn" onClick={openModal}>
+        <span>Reach Us</span>
+        <FaArrowRight />
+      </button>
+
+      <button className="reach-us-btn" onClick={handleEmailClick}>
+      <span>mail Us</span>
+      <FaArrowRight />
+    </button>
+
+      
+
+      <Modal
+        isOpen={isModalOpen}
+        onRequestClose={closeModal}
+        contentLabel="Compose Mail"
+        className="custom-modal"
+        overlayClassName="custom-overlay"
+      >
+        <h2 style={{marginBottom: "10px"}}>Compose Mail</h2>
+
+        <div className="email-field">
+          <label>From:</label>
+          <input
+            type="email"
+            placeholder="Enter recipient's email"
+            value={toEmail}
+            onChange={(e) => setToEmail(e.target.value)}
+            className="email-input"
+            required
+          />
+        </div>
+
+        <div className="email-field">
+          <label>To:</label>
+          <input
+            type="text"
+            value="support@enbotsolutions.com"
+            readOnly
+            className="email-input"
+          />
+        </div>
+        <Editor
+          editorState={editorState}
+          onEditorStateChange={handleEditorChange}
+          wrapperClassName="editor-wrapper"
+          editorClassName="editor"
+          toolbarClassName="editor-toolbar"
+          toolbar={{
+            options: ["inline", "emoji", "list", "link", "history"],
+            emoji: {
+              popupClassName: "emoji-popup",
+            },
+          }}
+        />
+        <div className="modal-actions">
+          <button onClick={sendEmail} className="send-mail-btn">
+            Send Mail
+          </button>
+          {errorMessage && <p style={{ color: "red" }} className="error-message">{errorMessage}</p>}
+          <button onClick={closeModal} className="close-modal-btn">
+            Close
+          </button>
+        </div>
+      </Modal>
+
       </section>
      
       <section className="faqs-container">
