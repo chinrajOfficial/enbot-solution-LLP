@@ -338,38 +338,6 @@ const Main = () => {
     setIsDarkMode(false);
   };
 
-
-  const [isModalOpen, setModalOpen] = useState(false);
-  const [editorState, setEditorState] = useState(EditorState.createEmpty());
-  const [toEmail, setToEmail] = useState(""); // State for 'To' email
-  const [errorMessage, setErrorMessage] = useState("");
-
-  const openModal = () => setModalOpen(true);
-
-  // Close Modal
-  const closeModal = () => {
-    setModalOpen(false);
-    setErrorMessage(""); // Clear error on close
-  };
-  // Handle Editor State Change
-  const handleEditorChange = (state) => {
-    setEditorState(state);
-    console.log('Editor state changed:', state);
-  };
-
-  // Handle Mail Sending
-  const sendEmail = () => {
-    const content = editorState.getCurrentContent().getPlainText();
-    if (!toEmail) {
-      setErrorMessage("Please fill in the recipient's email address!");
-      setTimeout(() => {
-        setErrorMessage("");
-      }, 2000);
-      return;
-    }
-    closeModal();
-  };
-
   const handleEmailClick = () => {
     const mailto = `mailto:support@enbotsolutions.com?subject=Need%20Assistance&body=Hello%20Team,%0D%0A%0D%0AWrite%20your%20message%20here.%0D%0A%0D%0ARegards,%0D%0A[enbot%20Name]`;
     window.location.href = mailto;
@@ -649,24 +617,12 @@ const Main = () => {
           </p>
         </div>
         <img src={RocketManImg} alt="" />
-        {/* <button className="reach-us-btn">
+        <button className="reach-us-btn" onClick={handleEmailClick}>
           <span>Reach Us</span>
           <FaArrowRight />
-        </button> */}
+        </button>
 
-      <button className="reach-us-btn" onClick={openModal}>
-        <span>Reach Us</span>
-        <FaArrowRight />
-      </button>
-
-      <button className="reach-us-btn" onClick={handleEmailClick}>
-      <span>mail Us</span>
-      <FaArrowRight />
-    </button>
-
-      
-
-      <Modal
+      {/* <Modal
         isOpen={isModalOpen}
         onRequestClose={closeModal}
         contentLabel="Compose Mail"
@@ -718,7 +674,7 @@ const Main = () => {
             Close
           </button>
         </div>
-      </Modal>
+      </Modal> */}
 
       </section>
      
