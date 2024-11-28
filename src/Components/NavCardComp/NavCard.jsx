@@ -11,20 +11,20 @@ import { GiPriceTag } from "react-icons/gi";
 import { MdOutlineFeaturedVideo } from "react-icons/md";
 
 const SCROLL_DURATION = 1000;
-const NavCard = ({setIsCloseIc, isCloseIc}) => {
-  const changeMenuView = () => {
-    setIsCloseIc(!isCloseIc)
-    var navBar = document.getElementById('mobile-nav')
-    navBar.style.right = '-100%';
-    navBar.style.transition = '.5s ease-in';
-  }
-  return (
-    <div className='NavCard'>
-       <ul className='NavList'>
-            <li  onClick={changeMenuView} className='NavItem TopSpace'>
-                <IoHomeOutline onClick={changeMenuView} className='NavMenuIcon'/>
-                <ScrollLink className="NavMenu" to="home" spy={true} duration={SCROLL_DURATION} onClick={changeMenuView}>Home</ScrollLink>
-            </li>
+    const NavCard = ({setIsCloseIc, isCloseIc}) => {
+    const changeMenuView = () => {
+        setIsCloseIc(!isCloseIc)
+        var navBar = document.getElementById('mobile-nav')
+        navBar.style.right = '-100%';
+        navBar.style.transition = '.5s ease-in';
+    }
+    return (
+        <div className='NavCard'>
+        <ul className='NavList'>
+                <li  onClick={changeMenuView} className='NavItem TopSpace'>
+                    <IoHomeOutline onClick={changeMenuView} className='NavMenuIcon'/>
+                    <ScrollLink className="NavMenu" to="home" spy={true} duration={SCROLL_DURATION} onClick={changeMenuView}>Home</ScrollLink>
+                </li>
             <li className='NavItem'>
                 <MdOutlineMiscellaneousServices className='NavMenuIcon'/>
                 <ScrollLink className="NavMenu" to="services" spy={true} duration={200} onClick={changeMenuView} offset={-150}>Services</ScrollLink>
