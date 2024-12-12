@@ -14,7 +14,7 @@
     transition: background-color 0.3s, box-shadow 0.1s; 
 }
 .sticky {
-    position: fixed;
+    position: sticky;
     top: 0;
     background-color: var(--navStickyBgcolor);
     box-shadow: 0 4px 8px rgba(139, 134, 150, 0.3);
@@ -27,8 +27,13 @@
     justify-content: space-between;
     align-items: center;
 }
+section {
+    scroll-margin-top: 70px; /* Matches header height */
+  }
+  
 .nav-logo{
     cursor: pointer;
+    height: 80%;
 }
 .nav-menus li{
     list-style: none;
@@ -147,6 +152,7 @@
     cursor: pointer;
     position: relative;
     display: inline-block;
+    scroll-margin-top: 150px;
     
 }
 .sec-headers::before {

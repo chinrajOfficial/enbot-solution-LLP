@@ -23,31 +23,31 @@ const SCROLL_DURATION = 1000;
         <ul className='NavList'>
                 <li  onClick={changeMenuView} className='NavItem TopSpace'>
                     <IoHomeOutline onClick={changeMenuView} className='NavMenuIcon'/>
-                    <ScrollLink className="NavMenu" to="home" spy={true} duration={SCROLL_DURATION} onClick={changeMenuView}>Home</ScrollLink>
+                    <ScrollLink className="NavMenu" to="home" spy={true} duration={SCROLL_DURATION} offset={-120} onClick={changeMenuView}>Home</ScrollLink>
                 </li>
             <li className='NavItem'>
                 <MdOutlineMiscellaneousServices className='NavMenuIcon'/>
-                <ScrollLink className="NavMenu" to="services" spy={true} duration={200} onClick={changeMenuView} offset={-150}>Services</ScrollLink>
+                <ScrollLink className="NavMenu" to="services" spy={true} duration={200} onClick={changeMenuView} offset={-120}>Services</ScrollLink>
             </li>
             <li className='NavItem'>
                 <LiaBookSolid className='NavMenuIcon'/>
-                <ScrollLink className="NavMenu" to="about" spy={true} duration={400} onClick={changeMenuView} offset={-150}>About</ScrollLink>
+                <ScrollLink className="NavMenu" to="about" spy={true} duration={400} onClick={changeMenuView} offset={-120}>About</ScrollLink>
             </li>
             <li className='NavItem'>
                 <MdOutlineFeaturedVideo className='NavMenuIcon'/>
-                <ScrollLink className="NavMenu" to="features" spy={true} duration={500} onClick={changeMenuView} offset={-150}>Features</ScrollLink>
+                <ScrollLink className="NavMenu" to="features" spy={true} duration={500} onClick={changeMenuView} offset={-120}>Features</ScrollLink>
             </li>
             <li className='NavItem'>
                 <AiOutlineProduct className='NavMenuIcon'/>
-                <ScrollLink className="NavMenu" to="products" spy={true} duration={600} onClick={changeMenuView} offset={-150}>Products</ScrollLink>
+                <ScrollLink className="NavMenu" to="products" spy={true} duration={600} onClick={changeMenuView} offset={-120}>Products</ScrollLink>
             </li>
             <li className='NavItem'>
                 <GiPriceTag className='NavMenuIcon'/>
-                <ScrollLink className="NavMenu" to="pricing" spy={true} duration={700} onClick={changeMenuView} offset={-130}>Pricing</ScrollLink>
+                <ScrollLink className="NavMenu" to="pricing" spy={true} duration={700} onClick={changeMenuView} offset={-120}>Pricing</ScrollLink>
             </li>
             <li className='NavItem'>
                 <RiContactsLine className='NavMenuIcon'/>
-                <ScrollLink className="NavMenu" to="contact" spy={true} duration={SCROLL_DURATION} onClick={changeMenuView} offset={-230}>Contact Us</ScrollLink>
+                <ScrollLink className="NavMenu" to="contact" spy={true} duration={SCROLL_DURATION} onClick={changeMenuView} offset={-220}>Contact Us</ScrollLink>
             </li>
         </ul>
     </div>

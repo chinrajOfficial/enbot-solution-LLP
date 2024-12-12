@@ -4,8 +4,14 @@ import { Link as ScrollLink, Element } from "react-scroll";
 import NavCard from "../NavCardComp/NavCard";
 import HomeImg from "../../Assets/HomePageImg.png";
 import WebScrapping from "../../Components/Web Scrapping/WebScrapping"
+
+
 import DarkLogo from "../../Assets/DarkLogoTheme.png";
-import LightLogo from "../../Assets/LogoLight.png";
+// import LightLogo from "../../Assets/LogoLight.png";
+// import DarkLogo from "../../Assets/MaxDarkLogo.png";
+import LightLogo from "../../Assets/MaxLightLogo.png";
+
+
 import { MdOutlineDarkMode, MdDarkMode } from "react-icons/md";
 import Shape1 from "../../Assets/Shape1.png";
 import Shape2 from "../../Assets/Shape2.svg";
@@ -357,43 +363,39 @@ const Main = () => {
               className="nav-active-menu"
               to="home"
               spy={true}
-              duration={SCROLL_DURATION}
+              duration={500}
+              offset={-150}
             >
               Home
             </ScrollLink>
           </li>
           <li>
-            <ScrollLink to="services" spy={true} duration={200} offset={-320}>
+            <ScrollLink to="services" spy={true} duration={500} offset={-150}>
               Services
             </ScrollLink>
           </li>
           <li>
-            <ScrollLink to="about" spy={true} duration={400} offset={-80}>
+            <ScrollLink to="about" spy={true} duration={500} offset={-70}>
               About
             </ScrollLink>
           </li>
           <li>
-            <ScrollLink to="features" spy={true} duration={500} offset={-200}>
+            <ScrollLink to="features" spy={true} duration={500} offset={-150}>
               Features
             </ScrollLink>
           </li>
           <li>
-            <ScrollLink to="products" spy={true} duration={600} offset={-200}>
+            <ScrollLink to="products" spy={true} duration={500} offset={-150}>
               Products
             </ScrollLink>
           </li>
           <li>
-            <ScrollLink to="pricing" spy={true} duration={700} offset={-100}>
+            <ScrollLink to="pricing" spy={true} duration={500} offset={-100}>
               Pricing
             </ScrollLink>
           </li>
           <li>
-            <ScrollLink
-              to="contact"
-              spy={true}
-              duration={SCROLL_DURATION}
-              offset={-300}
-            >
+            <ScrollLink to="contact" spy={true} duration={500} offset={-70}>
               Contact
             </ScrollLink>
           </li>
@@ -453,10 +455,10 @@ const Main = () => {
         />
       </Element>
 
-      <Element name="services" className="service-section">
+      <Element className="service-section">
         <div className="service-intro-section">
           <div className="header-container">
-              <h2 className="sec-headers">Services</h2>
+              <h2 name="services" id="services" className="sec-headers">Services</h2>
           </div>
           <h1>Unveiling Our Unique Edge.</h1>
           <p>
@@ -514,7 +516,7 @@ const Main = () => {
         </div>
       </Element>
 
-      <Element name="about" className="sec-3">
+      <Element name="about" id="about" className="sec-3">
         <WhoWeAre
           title="Who We Are."
           des="We are a team of problem solvers driven by growth strategists and experts in machine learning and analytics. We tackle our clients' most challenging issues in automation, digital growth, data democratization, data-led transformations, and scaling. Specializing in building data products with machine learning and AI, we excel in predictive analytics, NLP engineering, computer vision, and deep learning."
@@ -522,7 +524,7 @@ const Main = () => {
           image={GrowthImg}
         />
       </Element>
-      <Element name="features">
+      <Element id="features" name="features">
         <section className="features-section">
           <div className="features-container">
             <h1 className="feature-header">Powerful Web Scraping Framework</h1>
@@ -531,7 +533,7 @@ const Main = () => {
         </section>
       </Element>
       <WebScrapping/>
-      <Element name="products">
+      <Element id="products" name="products">
         <section>
           <div className="service-intro-section">
             <div className="header-container">
@@ -582,7 +584,7 @@ const Main = () => {
         </section>
       </Element>
 
-      <Element name="pricing">
+      <Element id="pricing" name="pricing">
         <Pricing/>
       </Element>
 
@@ -604,7 +606,6 @@ const Main = () => {
         <img className="snake-shape-img" src={SnakeShapeImg} alt="" />
       </section>
       
-
       <section className="productivity-container">
         <div className="productivity-contents">
           <h1>Let's Chat & Increase Your Productivity.</h1>
@@ -622,61 +623,6 @@ const Main = () => {
           <span>Reach Us</span>
           <FaArrowRight />
         </button>
-
-      {/* <Modal
-        isOpen={isModalOpen}
-        onRequestClose={closeModal}
-        contentLabel="Compose Mail"
-        className="custom-modal"
-        overlayClassName="custom-overlay"
-      >
-        <h2 style={{marginBottom: "10px"}}>Compose Mail</h2>
-
-        <div className="email-field">
-          <label>From:</label>
-          <input
-            type="email"
-            placeholder="Enter recipient's email"
-            value={toEmail}
-            onChange={(e) => setToEmail(e.target.value)}
-            className="email-input"
-            required
-          />
-        </div>
-
-        <div className="email-field">
-          <label>To:</label>
-          <input
-            type="text"
-            value="support@enbotsolutions.com"
-            readOnly
-            className="email-input"
-          />
-        </div>
-        <Editor
-          editorState={editorState}
-          onEditorStateChange={handleEditorChange}
-          wrapperClassName="editor-wrapper"
-          editorClassName="editor"
-          toolbarClassName="editor-toolbar"
-          toolbar={{
-            options: ["inline", "emoji", "list", "link", "history"],
-            emoji: {
-              popupClassName: "emoji-popup",
-            },
-          }}
-        />
-        <div className="modal-actions">
-          <button onClick={sendEmail} className="send-mail-btn">
-            Send Mail
-          </button>
-          {errorMessage && <p style={{ color: "red" }} className="error-message">{errorMessage}</p>}
-          <button onClick={closeModal} className="close-modal-btn">
-            Close
-          </button>
-        </div>
-      </Modal> */}
-
       </section>
      
       <section className="faqs-container">
