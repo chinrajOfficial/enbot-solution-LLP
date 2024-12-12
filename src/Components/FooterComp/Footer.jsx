@@ -6,9 +6,11 @@ import { VscSend } from "react-icons/vsc";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa6";
 import { FaTwitter } from "react-icons/fa";
 import { Link as ScrollLink, Element } from "react-scroll";
-const Footer = () => {
+const Footer = (props) => {
 
     const SCROLL_DURATION = 1000;
+    const mailFunc= props.mailfunc
+    
   return (
     <div>
         <div className='footer-container'>
@@ -31,7 +33,7 @@ const Footer = () => {
                     </div>
                     <div className='footer-first-container'>
                         <h2 className=''>Support</h2>
-                        <ScrollLink
+                        <ScrollLink onClick={mailFunc}
                         className="footer-menus"
                             to="contact"
                             spy={true}
@@ -45,7 +47,7 @@ const Footer = () => {
                         <h2 className=''>Newsletter</h2>
                         <p className='footer-content'>Subscribe to receive future updates</p>
                         <div className='foter-input-container'>
-                            <input type="email" placeholder='Email Address'/>
+                            <input onClick={mailFunc} type="email" placeholder='Email Address'/>
                             <button><VscSend /></button>
                         </div>
                     </div>

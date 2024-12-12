@@ -341,6 +341,7 @@ const Main = () => {
   const handleEmailClick = () => {
     const mailto = `mailto:support@enbotsolutions.com?subject=Need%20Assistance&body=Hello%20Team,%0D%0A%0D%0AWrite%20your%20message%20here.%0D%0A%0D%0ARegards,%0D%0A[enbot%20Name]`;
     window.location.href = mailto;
+    
   };
   return (
     <>
@@ -695,7 +696,7 @@ const Main = () => {
           ))}
         </div>
       </section>
-      <Footer />
+      <Footer mailfunc = {handleEmailClick}/>
     </>
   );
 };
