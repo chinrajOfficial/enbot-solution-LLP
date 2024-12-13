@@ -381,7 +381,7 @@ const Main = () => {
             </ScrollLink>
           </li>
           <li>
-            <ScrollLink to="services" spy={true} duration={500} offset={-200}>
+            <ScrollLink to="services" spy={true} duration={500} offset={-150}>
               Services
             </ScrollLink>
           </li>

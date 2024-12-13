@@ -1,20 +1,17 @@
-
-
 .navbar {
     width: 100%;
     padding: 0 5%;
-    height: 20vh;
+    height: 17vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-family: var(--segoeFont);
-    /* position: relative; */
+    position: relative;
     top: 0;
-    overflow: hidden;
     transition: background-color 0.3s, box-shadow 0.1s; 
 }
 .sticky {
-    position: fixed;
+    position: sticky;
     top: 0;
     background-color: var(--navStickyBgcolor);
     box-shadow: 0 4px 8px rgba(139, 134, 150, 0.3);
