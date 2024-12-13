@@ -8,7 +8,7 @@
     justify-content: space-between;
     align-items: center;
     font-family: var(--segoeFont);
-    position: relative;
+    /* position: relative; */
     top: 0;
     overflow: hidden;
     transition: background-color 0.3s, box-shadow 0.1s; 
@@ -28,7 +28,7 @@
     align-items: center;
 }
 section {
-    scroll-margin-top: 70px; /* Matches header height */
+    scroll-margin-top: 70px;
   }
   
 .nav-logo{

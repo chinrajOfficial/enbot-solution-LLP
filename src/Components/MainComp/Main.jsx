@@ -7,9 +7,9 @@ import WebScrapping from "../../Components/Web Scrapping/WebScrapping"
 
 
 import DarkLogo from "../../Assets/DarkLogoTheme.png";
-// import LightLogo from "../../Assets/LogoLight.png";
+import LightLogo from "../../Assets/LogoLight.png";
 // import DarkLogo from "../../Assets/MaxDarkLogo.png";
-import LightLogo from "../../Assets/MaxLightLogo.png";
+// import LightLogo from "../../Assets/MaxLightLogo.png";
 
 
 import { MdOutlineDarkMode, MdDarkMode } from "react-icons/md";
@@ -117,16 +117,27 @@ const Main = () => {
       navbar.classList.remove("sticky");
     }
   };
+  // const handleScroll = () => {
+  //   const navbar = document.getElementById("navbar");
+  //   if (window.pageYOffset > navbar.offsetTop) {
+  //     navbar.classList.add("sticky");
+  //   } else {
+  //     navbar.classList.remove("sticky");
+  //   }
+  // };
+
   const handleScroll = () => {
     const navbar = document.getElementById("navbar");
-    if (window.pageYOffset > navbar.offsetTop) {
+    const navbarHeight = navbar.offsetHeight;
+    if (window.pageYOffset > navbarHeight) {
       navbar.classList.add("sticky");
     } else {
       navbar.classList.remove("sticky");
     }
   };
-
+  
   window.addEventListener("scroll", handleScroll);
+  
 
 
   const closeForm = () => {
@@ -370,7 +381,7 @@ const Main = () => {
             </ScrollLink>
           </li>
           <li>
-            <ScrollLink to="services" spy={true} duration={500} offset={-150}>
+            <ScrollLink to="services" spy={true} duration={500} offset={-200}>
               Services
             </ScrollLink>
           </li>
