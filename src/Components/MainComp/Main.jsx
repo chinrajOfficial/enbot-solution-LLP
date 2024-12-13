@@ -456,9 +456,9 @@ const Main = () => {
       </Element>
 
       <Element className="service-section">
-        <div className="service-intro-section">
+        <div name="services" id="services" className="service-intro-section">
           <div className="header-container">
-              <h2 name="services" id="services" className="sec-headers">Services</h2>
+              <h2 className="sec-headers">Services</h2>
           </div>
           <h1>Unveiling Our Unique Edge.</h1>
           <p>
@@ -524,6 +524,7 @@ const Main = () => {
           image={GrowthImg}
         />
       </Element>
+
       <Element id="features" name="features">
         <section className="features-section">
           <div className="features-container">
@@ -532,10 +533,11 @@ const Main = () => {
           </div>
         </section>
       </Element>
+
       <WebScrapping/>
       <Element id="products" name="products">
         <section>
-          <div className="service-intro-section">
+          <div className="product-intro-section">
             <div className="header-container">
               <h2 className="sec-headers">Products</h2>
             </div>
